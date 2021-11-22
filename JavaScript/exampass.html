@@ -37,15 +37,92 @@
             console.log(js);
 
             if(c >= 50 && java >=50 && js >= 50){
-                if(c >80 || java >80 || js >80){
-                document.write("<h1>This student is Distinction!</h1>");
+
+                if(c >80 && java >80 && js >80){
+                    document.write(`<h1>This student is Distinction in all Subject!</h1>`);
+                    document.write(`<h1>This student is Distinction in C with mark ${c}.</h1>`);
+                    document.write(`<h1>This student is Distinction in Java with mark ${java}.</h1>`);
+                    document.write(`<h1>This student is Distinction in JS with mark ${js}.</h1>`);
                 }
+
+                else if(c >80 || java >80 || js >80){
+
+                    if(c>80){
+
+                        document.write(`<h1>This student is Distinction in C with mark ${c}.</h1>`);
+
+                        if(java >80){
+                            document.write(`<h1>This student is Distinction in Java with mark ${java}.</h1>`);
+                        }
+
+                        if(js >80){
+                            document.write(`<h1>This student is Distinction in JS with mark ${js} </h1>`);
+                        }
+                    }
+
+                    else if(java >80){
+
+                        document.write(`<h1>This student is Distinction in Java with mark ${java}.</h1>`);
+                        
+                        if(js >80){
+                            document.write(`<h1>This student is Distinction in JS with mark ${js}.</h1>`);
+                        }
+                    }
+
+                    else{
+                        document.write(`<h1>This student is Distinction in JS with mark ${js}.</h1>`);
+                    }
+                    
+                }
+
                 else{
-                    document.write("<h1>This student is Pass!</h1>");
+
+                    document.write(`<h1>This student is Pass in all Subject!</h1>`);
+                    document.write(`<h1>This student is Pass in C with mark ${c}.</h1>`);
+                    document.write(`<h1>This student is Pass in Java with mark ${java}.</h1>`);
+                    document.write(`<h1>This student is Pass in JS with mark ${js}.</h1>`);
+
                 }
+
             }
+
             else{
-                document.write("<h1>This student is Fail!</h1>");
+
+                if(c<50 && java<50 && js<50){
+
+                    document.write(`<h1>This student is Fail in all Subject!</h1>`);
+                    document.write(`<h1>This student is Fail in C with mark ${c}.</h1>`);
+                    document.write(`<h1>This student is Fail in Java with mark ${java}.</h1>`);
+                    document.write(`<h1>This student is Fail in JS with mark ${js}.</h1>`);
+
+                }
+
+                else if(c<50){
+
+                    document.write(`<h1>This student is Fail in C with mark ${c}.</h1>`);
+
+                    if(java<50){
+                        document.write(`<h1>This student is Fail in Java with mark ${java}.</h1>`);
+                    }
+
+                    if(js<50){
+                        document.write(`<h1>This student is Fail in JS with mark ${js}.</h1>`);
+                    }
+                }
+
+                else if(java<50){
+
+                        document.write(`<h1>This student is Fail in Java with mark ${java}.</h1>`);
+                        
+                    if(js<50){
+                        document.write(`<h1>This student is Fail in JS with mark ${js}.</h1>`);
+                    }
+                }
+
+                else{
+                    document.write(`<h1>This student is Fail in JS with mark ${js}.</h1>`);
+                }
+                
             }
         }
     </script>
