@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS4</title>
+</head>
+<body>
+    <script>
+        //For Loop
+        for(let i= 1 ; i<=5 ; i++ ){
+            document.write("<h3>Hello JS!</h3>");
+        }
+
+        for(let n = 1 ; n<= 5; n++){
+            result = 2*n;
+            document.write(`<h3> 2 x ${n} = ${result}<h3>`);
+        }
+
+        let list = ['a','b','c','d'];
+
+        for(let j = 0 ; j < list.length ; j++){
+            document.write(`<h3>${list[j]}</h3>`);
+        }
+
+        //While Loop
+        var num = 1;
+        while(num<5){
+            document.write(`<h3>This Number is ${num}</h3>`);
+            num++;
+        }
+
+        //do while Loop
+        let no = 1;
+        do{
+            document.write(`<h3>This NO: is ${no}</h3>`);
+            no++;
+        }while(no<=5);
+
+    </script>
+</body>
+</html>
