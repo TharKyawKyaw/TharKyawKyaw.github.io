@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom1</title>
+</head>
+<body>
+    <h1>Dom Selector</h1>
+
+    <h3 id="lg">Language</h3>
+    <p class = "lang">HTML</p>
+    <p class="lang">JavaScript</p>
+    <p class="lang">CSS</p>
+
+    <h2 id="add1"></h2>
+    <h2 id="add2"></h2>
+    <button onclick="language()">Click</button>
+
+    <script>
+        function language(){
+            let lg = document.getElementById('lg').innerHTML;
+            let add1 = document.getElementById('add1');
+            let add2 = document.getElementById('add2');
+            add1.innerHTML = "<i>This is Text</i>";
+            add2.innerText = "<i>This is Text</i>";
+
+            //call all class
+            let class_lg= document.getElementsByClassName('lang');
+            console.log(class_lg);
+            console.log(class_lg[0]);
+
+            //call all tag
+            let name_lg = document.getElementsByTagName('p');
+            console.log(name_lg);
+            console.log(name_lg[1]);
+
+            //call with id
+            let q_lang = document.querySelector('#lg');
+            console.log(q_lang);
+
+            //call first class
+            let c_lang = document.querySelector('.lang');
+            c_lang.style.backgroundColor = 'red';
+            console.log(c_lang);
+
+            //call call class
+            // let class_lang = document.querySelectorAll('.lang');
+            // class_lang.style.backgroundColor = 'blue';
+
+            //call first tag
+            let name_lang = document.querySelector('p');
+            console.log(name_lang);
+
+        }
+    </script>
+</body>
+</html>

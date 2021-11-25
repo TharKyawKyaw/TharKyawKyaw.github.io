@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom4</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="20">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <button onclick="showTable()">Show</button>
+    <script>
+        function showTable(){
+            let data = [
+                {name: 'Mg Mg',age: 34},
+                {name: 'Ag Ag',age: 35},
+                {name: 'Hla Hla',age: 33},
+                {name: 'Mya Mya',age: 32}
+            ];
+
+            let tbody = document.querySelector("#tbody");
+            let myData = '';
+            let i = 1;
+
+            for(let row of data){
+                myData += `<tr>
+                    <td>${i++}</td>
+                    <td>${row.name}</td>
+                    <td>${row.age}</td>
+                        </tr>`;
+            }
+            tbody.innerHTML = myData;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Input</title>
+</head>
+<body>
+
+    <div align="center">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" name="name" id="name" placeholder="Enter Name" required>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        <input type="number" name="age" id="age" placeholder="Enter Age" required>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <br><br>
+    
+        <button onclick="show()">Show</button>
+        <br><br>
+    
+        <table border="1" cellspaceing="0" cellpadding="15">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+    
+            <tbody id="tbody">
+    
+            </tbody>
+        </table>
+    
+    </div>
+    <script>
+        let i=1;
+
+        function show(){
+            let data = [{
+                name: document.getElementById('name').value,
+                age:document.getElementById('age').value
+            }];
+
+            let tbody = document.querySelector('#tbody');
+            let table_data = document.createElement('tr');
+            let myData ='';
+
+            for(let row of data){
+            myData = `
+                    <td>${i++}</td>
+                    <td>${row.name}</td>
+                    <td>${row.age}</td>
+                    `
+            };
+            console.log(myData);
+            table_data.innerHTML = myData;
+            tbody.appendChild(table_data)
+            // tbody.innerHTML = myData;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS6</title>
+</head>
+<body>
+<script>
+    //Function
+    function funName(){
+        document.write("<h3>Hello Function</h3>");
+    }
+    funName();
+
+    function result(num1,num2){
+        let res = num1 + num2;
+        document.write(`<h3>${res}</h3>`);
+    }
+    result(35,34);
+
+    function subResult(num1=5,num2=2){
+        let sub_res= num1-num2;
+        document.write(`<h3>${sub_res}</h3>`);
+    }
+    subResult();
+
+    let number1 = parseInt(prompt("Enter a Number One"));
+    let number2 = parseInt(prompt("Enter a Number Two"));
+    console.log(number1);
+    console.log(number2);
+    result(number1,number2);
+
+    //Object
+    let laptop ={brand: 'Apple' , type: 'M1' , price: 2700000};
+    console.log(laptop);
+    console.log(laptop.brand);
+
+</script>
+</body>
+</html>
