@@ -50,28 +50,42 @@
     <script>
         let i=1;
 
+        // function show(){
+        //     let data = [{
+        //         name: document.getElementById('name').value,
+        //         age:document.getElementById('age').value
+        //     }];
+
+        //     let tbody = document.querySelector('#tbody');
+        //     let table_data = document.createElement('tr');
+        //     let myData ='';
+
+        //     for(let row of data){
+        //     myData = `
+        //             <td>${i++}</td>
+        //             <td>${row.name}</td>
+        //             <td>${row.age}</td>
+        //             `
+        //     };
+        //     console.log(myData);
+        //     table_data.innerHTML = myData;
+        //     tbody.appendChild(table_data)
+
+        // }
+   
         function show(){
-            let data = [{
-                name: document.getElementById('name').value,
-                age:document.getElementById('age').value
-            }];
+            let name = document.querySelector("#name").value;
+            let age = document.querySelector("#age").value;
 
-            let tbody = document.querySelector('#tbody');
-            let table_data = document.createElement('tr');
-            let myData ='';
+            let tbody = document.querySelector("#tbody");
 
-            for(let row of data){
-            myData = `
-                    <td>${i++}</td>
-                    <td>${row.name}</td>
-                    <td>${row.age}</td>
-                    `
-            };
-            console.log(myData);
-            table_data.innerHTML = myData;
-            tbody.appendChild(table_data)
-            // tbody.innerHTML = myData;
+            tbody.innerHTML += `<tr>
+                <td>${i++}</td>
+                <td>${name}</td>
+                <td>${age}</td>
+                    </tr>`;
+
         }
-    </script>
+   </script>
 </body>
 </html>
