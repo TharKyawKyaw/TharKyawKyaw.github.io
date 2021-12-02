@@ -1,0 +1,79 @@
+h1 {
+  /* color: red;  */ /* Text*/
+  /* color: #ff0000;*/ /* Hex Code #RRGGBB */
+  /* color: #f00; */ /* Short Hex code */
+  color: rgb(255, 0, 0); /* RGB*/
+  text-align: center;
+  text-transform: uppercase;
+}
+small {
+  color: blue;
+  line-height: 50px;
+  word-spacing: 30px;
+  letter-spacing: 10px;
+}
+
+/* Universal Selector */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Tag Selector/Element Selector */
+h4 {
+  color: red;
+  line-height: 40px;
+  text-align: justify;
+}
+
+/* Attribute Selector */
+a[title="Google"] {
+  color: red;
+  text-decoration: none;
+}
+
+/* '#'id Selector */
+#idSelector {
+  color: red;
+}
+
+/* '.'class Selector */
+.classSelector {
+  color: blue;
+  word-spacing: 10px;
+  letter-spacing: 10px;
+}
+
+/* descendent Selector "affect on grandchild" (parent(space)child(space)child)  */
+.desc span a {
+  color: green;
+}
+
+/* child Selector  "not affect on grandchild" (parent(>)child(>)child) */
+.child > a {
+  color: yellow;
+}
+
+/* Pseudo Selector */
+a:link {
+  color: red;
+}
+
+a:hover {
+  color: green;
+}
+
+a:active {
+  color: yellow;
+}
+
+a:visited {
+  color: grey;
+}
+
+/* Target (:target all target) (*:target target in *) (div:target target in div) (span:target target in span)*/
+div:target {
+  color: red;
+  font-size: 30px;
+  line-height: 50px;
+}
