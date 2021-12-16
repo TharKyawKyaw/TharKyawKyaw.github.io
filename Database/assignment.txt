@@ -1,4 +1,4 @@
-        Assignment 1
+      /*  Assignment 1  */
 
 CREATE DATABASE IF NOT EXISTS employee_db;
 CREATE TABLE employee
@@ -13,17 +13,17 @@ emp_nrcNumber INT NOT NULL UNIQUE
 );
 DESC employee;
 
------------------------------------------------------------
+/*-----------------------------------------------------------  */
 
-        Assignment 2
+     /*   Assignment 2   */
 
 /* Salespeople Table */
 CREATE TABLE salespeople
 (
-SNUM INT PRIMARY KEY,
-SNAME VARCHAR(50) NOT NULL,
-CITY VARCHAR(50) NOT NULL,
-COMM DECIMAL(3,2)
+sp_num INT PRIMARY KEY,
+sp_name VARCHAR(50) NOT NULL,
+city VARCHAR(50) NOT NULL,
+comm DECIMAL(3,2)
 );
 DESC salespeople;
 
@@ -34,7 +34,7 @@ cus_num INT PRIMARY KEY,
 cus_name VARCHAR(50) NOT NULL,
 cus_city VARCHAR(50) NOT NULL,
 cus_rating INT,
-salepeople_num INT  NOT NULL
+sp_num INT  NOT NULL
 );
 DESC customers;
 
@@ -45,6 +45,6 @@ order_num INT PRIMARY KEY,
 order_amount DECIMAL(7,2) NOT NULL,
 order_date DATE NOT NULL,
 cus_num INT NOT NULL,
-SNUM INT NOT NULL
+sp_num INT NOT NULL
 );
 DESC orders;
