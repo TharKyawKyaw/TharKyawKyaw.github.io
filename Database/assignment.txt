@@ -1,0 +1,50 @@
+        Assignment 1
+
+CREATE DATABASE IF NOT EXISTS employee_db;
+CREATE TABLE employee
+(
+emp_num INT PRIMARY KEY,
+emp_name VARCHAR(25) NOT NULL,
+emp_dob DATE NOT NULL,
+emp_salary INT,
+emp_phone INT NOT NULL UNIQUE,
+emp_email VARCHAR(25) NOT NULL UNIQUE,
+emp_nrcNumber INT NOT NULL UNIQUE
+);
+DESC employee;
+
+-----------------------------------------------------------
+
+        Assignment 2
+
+/* Salespeople Table */
+CREATE TABLE salespeople
+(
+SNUM INT PRIMARY KEY,
+SNAME VARCHAR(50) NOT NULL,
+CITY VARCHAR(50) NOT NULL,
+COMM DECIMAL(3,2)
+);
+DESC salespeople;
+
+/* Customers Table */
+CREATE TABLE customers
+(
+cus_num INT PRIMARY KEY,
+cus_name VARCHAR(50) NOT NULL,
+cus_city VARCHAR(50) NOT NULL,
+cus_rating INT,
+salepeople_num INT  NOT NULL
+);
+DESC customers;
+
+/* Orders */
+CREATE TABLE orders
+(
+order_num INT PRIMARY KEY,
+order_amount DECIMAL(7,2) NOT NULL,
+order_date DATE NOT NULL,
+cus_num INT NOT NULL,
+SNUM INT NOT NULL
+);
+DESC orders;

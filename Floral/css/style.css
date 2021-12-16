@@ -1,0 +1,331 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  src: url(../Lobster/Lobster-Regular.ttf);
+  font-family: lobster;
+}
+.logo {
+  width: 100px;
+  height: 70px;
+  margin-left: 20px;
+}
+.brand_name {
+  margin-left: 90px;
+  margin-top: -55px;
+  font-weight: bold;
+  font-family: lobster;
+  font-size: 20px;
+}
+.nav_brand {
+  display: inline-block;
+}
+.navbar ul {
+  float: right;
+}
+.navbar ul li {
+  display: inline-block;
+  margin-right: 40px;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.navbar ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar ul li a:hover {
+  color: #2f91bc;
+  letter-spacing: 4px;
+  transition-duration: 0.5s;
+}
+.navbar {
+  height: 90px;
+}
+.clear {
+  clear: both;
+}
+
+/* Background */
+.img {
+  width: 100%;
+  height: 550px;
+}
+
+.background_text {
+  position: absolute;
+  top: 250px;
+  left: 100px;
+}
+.perfect {
+  font-family: lobster;
+  font-weight: unset;
+  margin-bottom: 30px;
+}
+.shop {
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #2f91bc;
+  border: 1px solid #2f91bc;
+  border-radius: 5px;
+}
+.shop:hover {
+  color: white;
+  background-color: #2f91bc;
+}
+
+/* Product */
+.header {
+  text-align: center;
+  padding-top: 50px;
+}
+.divided {
+  max-width: 100px;
+  margin: auto;
+  border: 1px solid #2f91bc;
+}
+.product {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 50px;
+  grid-gap: 40px;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.product_img {
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.15);
+}
+.red {
+  color: red;
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 80px;
+  text-align: center;
+  background-image: url(../images/bg.jpg);
+  color: white;
+}
+.about div {
+  padding: 60px 0px;
+}
+.divider {
+  max-width: 50px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Packaging */
+.packaging {
+  margin-top: 80px;
+  margin-left: 100px;
+}
+.package_img {
+  float: left;
+  border-radius: 5px;
+}
+.package_content {
+  position: relative;
+  text-align: justify;
+  left: 50px;
+  width: 88%;
+}
+.package_header {
+  margin-top: 20px;
+}
+.icon {
+  margin-right: 10px;
+}
+
+/* Support */
+.support {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #e2e7e9;
+  padding: 30px 0px 30px 30px;
+}
+.support_icon p {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+/* Footer */
+.foot {
+  height: 250px;
+  background-color: #212529;
+}
+.footnav {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 50px 20px 0px;
+}
+.designed {
+  padding-top: 20px;
+  color: white;
+}
+.social_icon {
+  display: inline-block;
+  color: white;
+  padding: 20px 10px 0px;
+}
+
+/* Shop Page */
+.flower_title {
+  background-color: #e2e7e9;
+}
+.flower_link {
+  display: inline-block;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.flower_link:hover {
+  color: red;
+  letter-spacing: 2px;
+  transition-duration: 0.5s;
+}
+
+.flowers {
+  margin: 20px;
+}
+
+.rose_title,
+.tulip_title,
+.daisy_title {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.roses,
+.tulips,
+.daisies {
+  margin: 10px 50px 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px 40px;
+}
+.flower_img {
+  float: left;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.15);
+}
+.description {
+  position: relative;
+  padding-top: 50px;
+  left: 20px;
+}
+.description p {
+  padding-bottom: 10px;
+}
+.description button {
+  color: #2f91bc;
+  position: absolute;
+  top: 250px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+.description button:hover {
+  background-color: #2f91bc;
+  color: white;
+  box-shadow: none;
+}
+.divide_flower {
+  margin-top: 50px;
+}
+
+/* Start Contact */
+/* Contact Information */
+.contact {
+  margin-top: 50px;
+  margin-left: 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.contact h2 {
+  margin-bottom: 20px;
+}
+.contact_info,
+.message {
+  margin: auto;
+}
+/* Message us */
+.message_form {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.name,
+.email,
+.phone {
+  margin: 5px;
+  padding: 5px;
+  display: block;
+}
+.messaging {
+  margin: 5px;
+  padding: 5px;
+}
+.send_btn {
+  position: relative;
+  left: 50px;
+  top: 50px;
+  color: #070808;
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+.send_btn:hover {
+  background-color: #2f91bc;
+  color: white;
+  box-shadow: none;
+}
+
+/* About Us */
+.about_us {
+  text-align: center;
+  margin: 0px 150px 10px;
+}
+.about_des {
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+.about_img {
+  margin: auto;
+}
+.about_text {
+  margin: 10px;
+  text-align: justify;
+}
+.about_title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.com_staff {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.com_staff img {
+  width: 300px;
+  height: 200px;
+}
+.com_staff h3,
+.com_staff h5 {
+  margin-top: 10px;
+}
+.com_staff p {
+  padding: 10px;
+  text-align: start;
+}

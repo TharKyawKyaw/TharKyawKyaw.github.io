@@ -1,0 +1,18 @@
+CREATE DATABASE testing_db;  /* creating database*/
+CREATE DATABASE IF NOT EXISTS testing_db;
+/* Datatype */
+CREATE TABLE product
+(
+barCode INT PRIMARY KEY,
+name VARCHAR(10) NOT NULL,
+price FLOAT(5,2),
+expDate DATE,
+companyName VARCHAR(20) UNIQUE
+);
+
+DESC product;
+
+INSERT INTO product(barCode ,name,price,expDate , companyName)VALUES(1001, ' coffee' , 300 , '2021-12-16' , 'abc');
+INSERT INTO product(barCode ,name,price , companyName)VALUES(1002,'juice',500 , 'def');
+
+SELECT * FROM   product;

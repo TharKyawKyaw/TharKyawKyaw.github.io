@@ -72,8 +72,265 @@ a:visited {
 }
 
 /* Target (:target all target) (*:target target in *) (div:target target in div) (span:target target in span)*/
-div:target {
+:target {
   color: red;
   font-size: 30px;
   line-height: 50px;
+}
+
+/* Student Register */
+form {
+  width: 80%;
+  margin: auto; /* take samely place */
+}
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  height: 40px;
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border: 3px solid #555;
+}
+
+#dob {
+  width: 90%;
+}
+
+#dob select {
+  width: 30%;
+  height: 40px;
+}
+
+input[type="radio"]:checked + label {
+  color: red;
+}
+
+#address {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 30px;
+}
+
+input[type="checkbox"]:enabled + label {
+  color: yellow;
+  font-style: italic;
+}
+
+input[type="checkbox"]:checked + label {
+  color: red;
+  font-style: normal;
+}
+
+input[type="checkbox"]:disabled + label {
+  color: blue;
+}
+
+ul li {
+  margin-left: 50px;
+  width: 80%;
+  line-height: 40px;
+}
+li:first-child {
+  background-color: yellow;
+}
+li:last-child {
+  background-color: red;
+}
+li:nth-child(5) {
+  background-color: blue;
+}
+
+p:empty {
+  width: 100%;
+  height: 20px;
+  background-color: cyan;
+}
+.thanku {
+  text-align: center;
+}
+
+/* Border Lessons */
+.borderone {
+  border: 3px dotted red;
+}
+
+.bordertwo {
+  border-bottom: 5px solid blue;
+}
+
+.borderstyle {
+  border-style: solid;
+}
+
+.bordermix {
+  /* border-style: solid dotted dashed double; */
+  /* T R B L */
+  /* border-style: solid dotted dashed; */
+  /* T LR B */
+  /* border-style: double solid; */
+  /* TB LR */
+  border-style: double;
+  /* For all border TRBL */
+}
+
+.borderwidth {
+  border-width: 10px;
+  /* For all border TRBL */
+  border-style: dotted;
+}
+
+.bordercolor {
+  width: 80%;
+  margin: auto;
+  border-color: red;
+  border-style: double;
+}
+
+/* Margin */
+.marginone {
+  border: 1px solid red;
+  margin: 15px;
+  /*  All Four */
+}
+.margintwo {
+  border: 1px solid blue;
+  margin-top: 40px;
+}
+
+/* Padding */
+.padding {
+  border: 1px solid red;
+  margin: 40px;
+  /* all four margin */
+  padding: 20px 40px;
+  /* TB and LR */
+}
+
+/* Layout change with display to change another (display: block) (display: inline)*/
+/* inline */
+.inline {
+  border: 1px solid red;
+  width: 400px;
+  display: inline-block;
+}
+/* block */
+.block {
+  border: 1px solid green;
+  width: 400px;
+  height: 50px;
+  display: inline-block;
+}
+
+/* Float */
+div.floatleft img {
+  width: 40%;
+  float: left;
+}
+.clear {
+  clear: both;
+}
+div.floatright img {
+  width: 40%;
+  float: right;
+}
+
+/* Grid */
+.gridOne div,
+.gridTwo div,
+.gridThree div,
+.gridFour div,
+.gridFive div,
+.gridSix div {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.gridOne,
+.gridTwo,
+.gridThree,
+.gridFour,
+.gridFive,
+.gridSix {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.gridTwo {
+  grid-column-gap: 50px;
+}
+
+.gridThree {
+  grid-row-gap: 30px;
+}
+
+.gridFour {
+  grid-gap: 50px 20px;
+}
+
+.gridFive .columnadd {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.gridSix .rowadd {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+/* Position */
+.relative_parent {
+  border: 1px solid black;
+  width: 1000px;
+  height: 500px;
+}
+
+.relative {
+  border: 1px solid blue;
+  width: 500px;
+  position: relative;
+  top: 70px;
+  left: 100px;
+}
+
+.absolute_parent {
+  border: 1px solid red;
+  width: 1200px;
+  height: 500px;
+  position: relative;
+}
+
+.absolute {
+  border: 2px solid green;
+  width: 600px;
+  position: absolute;
+  top: 50px;
+  left: 150px;
+}
+
+.fixed {
+  position: fixed;
+  top: 100px;
+  right: 150px;
+}
+
+/* Font */
+
+/* Online Font */
+.onlinefont {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Offline Font */
+@font-face {
+  src: url(fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf);
+  font-family: roboto_mono;
+}
+.offlinefont {
+  font-family: roboto_mono;
 }

@@ -4,7 +4,8 @@
     <title>Student Register</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-<body>
+<body style="background-color: gray;">
+
     <h1>Student Register</h1>
 
     <form>
@@ -20,8 +21,8 @@
         <input type="number" name="phone" id="phone" placeholder="0913456">
         <br><br>
 
-        <label for="dob">Date of Birth</label>
-        <div>
+        <label for="">Date of Birth</label>
+        <div id="dob">
             <select name="" id="">
                 <option value="">Day</option>
                 <option value="">1</option>
@@ -68,6 +69,50 @@
 
         <label for="address">Address</label>
         <textarea name="address" id="address" cols="30" rows="5"></textarea>
+        <br><br>
+
+        <label for="">Qualification</label>
+        <div>
+            <input type="checkbox" name="" id="highschool">
+            <label for="highschool">HighSchool (10th)</label>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="highschool" disabled>
+            <label for="highschool">HighSchool (12th)</label>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="graduation">
+            <label for="graduation">Graduation (Bachelors)</label>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="master">
+            <label for="master">Post (Bachelors)</label>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="phd">
+            <label for="phd">PHD</label>
+        </div>
+        
+        <fieldset>
+            <Legend>Rules</Legend>
+            <ul>
+                <li>This is First Rule</li>
+                <li>This is Second Rule</li>
+                <li>This is Third Rule</li>
+                <li>This is Fourth Rule</li>
+                <li>This is Fifth Rule</li>
+                <li>This is Sixth Rule</li>
+                <li>This is Seventh Rule</li>
+            </ul>
+        </fieldset>
+        <br><br>
+
+        <p></p>
+        <p class="thanku">Thank You</p>
+        <p></p>
+
+        <br><br>
+
 
     </form>
 </body>
