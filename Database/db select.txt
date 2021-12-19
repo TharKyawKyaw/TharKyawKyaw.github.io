@@ -1,0 +1,27 @@
+CREATE TABLE users
+(
+id INT PRIMARY KEY,
+name VARCHAR(30),
+email VARCHAR(20),
+township VARCHAR(20),
+city VARCHAR(20)
+);
+
+INSERT INTO users(id,name,email,township,city) VALUES 
+    (1,'Mg Mg' ,'mgmg@gmail.com','Bahan','Yangon'),
+    (2,'Aung AUng' ,'agag@gmail.com','Hlaing','Yangon'),
+    (3,'Kyaw Kyaw' ,'kyawkyaw@gmail.com','Mahar Myaing','Mandalay'),
+    (4,'Yuri','yuri@gmail.com','Chan Mya Tharsi','Mandalay'),
+    (5,'John','john@gmail.com','Pale','Monywa');
+
+SELECT * FROM users;
+
+SELECT name,city FROM users;
+
+SELECT * FROM users LIMIT 3;
+
+SELECT * FROM users WHERE city <> 'Mandalay';
+
+SELECT * FROM users WHERE salary<= 6000 ;
+
+SELECT * FROM users WHERE salary BETWEEN 6000 AND 9000;
