@@ -36,4 +36,3 @@ SELECT * FROM employee;
 DELETE  FROM employee WHERE empNo=109;
 DELETE  FROM employee WHERE empNo=111;
 
-SELECT * FROM employee;

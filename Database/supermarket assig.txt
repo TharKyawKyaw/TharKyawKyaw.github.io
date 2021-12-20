@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS supermarket_db;
+
 /* Salespeople Table */
 CREATE TABLE salespeople
 (
@@ -6,7 +8,7 @@ sp_name VARCHAR(50) NOT NULL,
 city VARCHAR(50) NOT NULL,
 comm DECIMAL(3,2)
 );
-DESC salespeople;
+/*DESC salespeople;*/
 
 INSERT INTO salespeople(sp_num,sp_name,city,comm) VALUES 
     (1001,'Peel','London',.12),
@@ -15,7 +17,7 @@ INSERT INTO salespeople(sp_num,sp_name,city,comm) VALUES
     (1007,'Rifkin','Barcelona',.15),
     (1003,'Axelord','New York',.10);
 
-SELECT * FROM salespeople;
+/*SELECT * FROM salespeople; */
 
 /* Customers Table */
 CREATE TABLE customers
@@ -26,7 +28,7 @@ city VARCHAR(50) NOT NULL,
 cus_rating INT,
 sp_num INT  NOT NULL
 );
-DESC customers;
+/*DESC customers;*/
 
 INSERT INTO customers(cus_num,cus_name,city,cus_rating,sp_num) VALUES
     (2001,'Hoffman','London',100,1001),
@@ -37,7 +39,7 @@ INSERT INTO customers(cus_num,cus_name,city,cus_rating,sp_num) VALUES
     (2008,'Cisneros','San Jose',300,1007),
     (2007,'Pereira','Rome',100,1004);
 
-SELECT * FROM customers;
+/*SELECT * FROM customers;*/
 
 /* Orders */
 CREATE TABLE orders
@@ -48,7 +50,7 @@ order_date DATE NOT NULL,
 cus_num INT NOT NULL,
 sp_num INT NOT NULL
 );
-DESC orders;
+/*DESC orders;*/
 
 INSERT INTO orders(order_num,order_amount,order_date,cus_num,sp_num)VALUES
     (3001,18.69,'1990-10-03',2008,1007),
@@ -62,4 +64,29 @@ INSERT INTO orders(order_num,order_amount,order_date,cus_num,sp_num)VALUES
     (3010,1309.95,'1990-10-05',2004,1002),
     (3011,9891.88,'1990-10-06',2006,1001);
 
-SELECT * FROM orders;
+/*SELECT * FROM orders;*/
+
+SELECT DISTINCT order_num,order_amount,order_date FROM orders;
+
+SELECT * FROM customers WHERE sp_num = 1001 ;
+
+SELECT DISTINCT city,sp_name,sp_num,comm FROM salespeople;
+
+SELECT * FROM customers ORDER BY cus_name; 
+
+SELECT * FROM orders WHERE order_date BETWEEN '1990-10-04' AND '1990-10-08'; 
+
+SELECT DISTINCT sp_name,city FROM salespeople WHERE city = 'London' and comm > 0.10; 
+
+SELECT * FROM customers WHERE cus_name LIKE 'c%'; 
+
+SELECT DISTINCT cus_name FROM customers WHERE sp_num = 1001 OR sp_num = 1002 OR sp_num = 1007 ; 
+
+SELECT * FROM salespeople WHERE comm != .10  AND comm != .13 AND comm != .15 ; 
+
+SELECT DISTINCT city FROM customers; 
+
+SELECT * FROM customers LIMIT 3;  
+
+SELECT * FROM salespeople WHERE city = 'Rome';
+

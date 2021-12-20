@@ -1,0 +1,24 @@
+CREATE TABLE employee
+(
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    city VARCHAR(50),
+    salary INT
+);
+
+INSERT INTO employee(id,name,city,salary)VALUES
+    (1,'Mg Mg','Yangon',9000),
+    (2,'Aung Aung','Yangon',7800),
+    (3,'Kyaw Kyaw','Mandalay',6000),
+    (4,'Yuri','Mandalay',4200),
+    (5,'Jeon','Monywa',4000);
+
+/*SELECT * FROM employee WHERE salary IN (1000,4000,7800);
+
+SELECT * FROM employee WHERE name LIKE 'a%';
+SELECT * FROM employee WHERE name LIKE '%g';
+SELECT * FROM employee WHERE name LIKE '%n%'; 
+
+SELECT * FROM employee WHERE city = 'Mandalay' AND salary > 4000;*/
+
+SELECT * FROM employee WHERE salary NOT BETWEEN 4000 AND 6000;
