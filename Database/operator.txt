@@ -19,6 +19,26 @@ SELECT * FROM employee WHERE name LIKE 'a%';
 SELECT * FROM employee WHERE name LIKE '%g';
 SELECT * FROM employee WHERE name LIKE '%n%'; 
 
-SELECT * FROM employee WHERE city = 'Mandalay' AND salary > 4000;*/
+SELECT * FROM employee WHERE city = 'Mandalay' AND salary > 4000;
 
-SELECT * FROM employee WHERE salary NOT BETWEEN 4000 AND 6000;
+SELECT * FROM employee WHERE salary NOT BETWEEN 4000 AND 6000; */
+
+/* SELECT COUNT(*) 'Total' FROM employee; 
+SELECT COUNT(*) 'Total' FROM employee WHERE city ='Yangon'; 
+
+SELECT MIN(salary) 'Min Salary' ,MAX(salary) 'Max Salary' FROM employee WHERE city = 'Mandalay';
+
+SELECT SUM(salary) 'Total Salary' FROM employee;
+
+SELECT AVG(salary) 'Average Salary' FROM employee;
+
+SELECT AVG(salary) 'Average Salary at Mandalay' FROM employee WHERE city = 'Mandalay'; 
+
+SELECT city FROM employee GROUP BY city;
+SELECT city,MIN(salary) 'Min Salary' FROM employee GROUP BY city;
+
+SELECT city,COUNT(*) FROM employee GROUP BY city; 
+
+SELECT city,COUNT(*) FROM employee GROUP BY city HAVING COUNT(*) > 1; */
+
+SELECT city,MAX(salary) FROM employee GROUP BY city HAVING MAX(salary) > 6000;

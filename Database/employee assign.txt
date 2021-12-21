@@ -22,7 +22,7 @@ INSERT INTO employee (empNo,empName,salary,department,jobPosition,registerDate,c
     (109,'Suzy', 4000,'HR','Sale','2014-12-09','TaungGyi','1996-05-12','09342293382'),
     (110,'J Hope',4200,'HR','Developer','2014-12-09','Monywa','1995-09-03','09492289983');
 
-SELECT * FROM employee;
+/* SELECT * FROM employee;
 
 INSERT INTO employee(empNo,empName,registerDate)VALUES
     (111,'Kim Jong Kook','2010-04-29');
@@ -34,5 +34,28 @@ SELECT * FROM employee WHERE empNo=111;
 SELECT * FROM employee;
 
 DELETE  FROM employee WHERE empNo=109;
-DELETE  FROM employee WHERE empNo=111;
+DELETE  FROM employee WHERE empNo=111; */
 
+1.SELECT MAX(salary) FROM employee; 
+
+2.SELECT MIN(salary) FROM employee; 
+
+3.SELECT COUNT(*) FROM employee WHERE registerDate >= '2013-02-12'; 
+
+4.SELECT DISTINCT city FROM employee; 
+
+5.SELECT SUM(salary) FROM employee;   
+
+6.SELECT city,MAX(salary) FROM employee GROUP BY city;   
+
+7.SELECT AVG(salary)  FROM employee WHERE department = 'HR';  
+
+8.SELECT department,MIN(salary), MAX(salary) ,AVG(salary) FROM employee GROUP BY department;   
+
+9.SELECT salary,COUNT(*) 'Same Salary Emp' FROM employee GROUP BY salary; 
+
+10.SELECT department,COUNT(*) 'Same Department Emp' FROM employee GROUP BY department;
+
+11.SELECT * FROM employee WHERE empName LIKE '%hy%' ORDER BY empName DESC; 
+
+12.SELECT salary 'Three Max Salaries' FROM employee ORDER BY salary DESC LIMIT 3;

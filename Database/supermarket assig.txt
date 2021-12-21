@@ -66,21 +66,22 @@ INSERT INTO orders(order_num,order_amount,order_date,cus_num,sp_num)VALUES
 
 /*SELECT * FROM orders;*/
 
-SELECT DISTINCT order_num,order_amount,order_date FROM orders;
+/* SELECT order_num,order_amount,order_date FROM orders;
 
 SELECT * FROM customers WHERE sp_num = 1001 ;
 
-SELECT DISTINCT city,sp_name,sp_num,comm FROM salespeople;
+SELECT city,sp_name,sp_num,comm FROM salespeople;
 
 SELECT * FROM customers ORDER BY cus_name; 
 
 SELECT * FROM orders WHERE order_date BETWEEN '1990-10-04' AND '1990-10-08'; 
 
-SELECT DISTINCT sp_name,city FROM salespeople WHERE city = 'London' and comm > 0.10; 
+SELECT sp_name,city FROM salespeople WHERE city = 'London' and comm > 0.10; 
 
 SELECT * FROM customers WHERE cus_name LIKE 'c%'; 
 
-SELECT DISTINCT cus_name FROM customers WHERE sp_num = 1001 OR sp_num = 1002 OR sp_num = 1007 ; 
+/*SELECT cus_name FROM customers WHERE sp_num = 1001 OR sp_num = 1002 OR sp_num = 1007 ; */
+SELECT cus_name FROM customers WHERE sp_num IN(1001,1002,1003); 
 
 SELECT * FROM salespeople WHERE comm != .10  AND comm != .13 AND comm != .15 ; 
 
@@ -88,5 +89,15 @@ SELECT DISTINCT city FROM customers;
 
 SELECT * FROM customers LIMIT 3;  
 
-SELECT * FROM salespeople WHERE city = 'Rome';
+SELECT * FROM salespeople WHERE city = 'Rome'; */
 
+1.SELECT COUNT(*) FROM orders WHERE sp_num = '1001' AND order_amount > 1500;
+
+2.SELECT COUNT(*) FROM customers WHERE city = 'London' ;   
+
+3.SELECT MIN(order_amount) FROM orders;   
+
+4.SELECT order_date,SUM(order_amount) 'Sum Of Each Day' FROM orders GROUP BY order_date;
+4.SELECT order_date,MAX(order_amount) 'Highest Amount' FROM orders GROUP BY order_date;  
+
+5.SELECT cus_rating,cus_name,cus_num FROM customers ORDER BY cus_rating DESC;
