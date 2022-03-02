@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2 Events</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function (param){
+
+            var btn = $(".mybtn");
+            btn.on("click",function (param){
+                // console.log("Clicked");
+                $("p").hide(3000 , function(param){
+                    alert("Hided element");
+                });
+            });
+
+            $("a").on("click",function(e){
+                alert("Hi");
+                e.preventDefault();
+            });
+
+            $("#year").on("change",function(param){
+                var year=$(this).val();
+                if(year > 1){
+                    $("#major").show();
+                }
+                else{
+                    $("#major").hide();
+                }
+
+            });
+
+            $("#myform").on("submit",function(e){
+                var err=false;
+                var username = $("#username").val();
+                if(username.length <= 5){
+                    err = true;
+                }
+
+                var phoneno = $("#phoneno").val();
+                if(phoneno <=5){
+                    err = true;
+                }
+
+                if(err){
+                    e.preventDefault();
+                }
+
+            })
+        });
+    </script>
+</head>
+<body>
+
+    <a href="https://google.com" target="_blank">Go Google</a>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, ullam modi est error et quas accusantium vel 
+        repudiandae quis suscipit sint rem quidem incidunt tempora unde harum. Necessitatibus explicabo cum exercitationem!Voluptatibus, odio ex magnam vero voluptate corporis ratione tenetur dignissimos. Velit libero omnis minima labore hic earum,veritatis tenetur?</p>
+
+    <button class="mybtn">Click</button>
+
+    <form action="" id="myform">
+
+        <input type="text" name="username" placeholder="Username..." id="username"><br>
+        <input type="text" name="phoneno" placeholder="Phone No..." id="phoneno"><br>
+
+        <select name="year" id="year">
+            <optgroup label="Academic Year">
+                <option value="1">First Year</option>
+                <option value="2">Second Year</option>
+                <option value="3">Third Year</option>
+                <option value="4">Fourth Year</option>
+            </optgroup>
+        </select>
+
+        <div id="major"style="display: none" >
+            <input type="radio" name="major" checked="checked" value="ct">CT
+            <input type="radio" name="major" value="cs">CS
+        </div>
+
+        <button type="submit">Save</button>
+
+    </form>
+</body>
+</html>

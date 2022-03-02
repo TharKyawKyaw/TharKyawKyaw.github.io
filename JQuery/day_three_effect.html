@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3 Effect</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function (param){
+            $("#hide").on("click",function (){
+                console.log("Clicked");
+                $("p").hide();
+            });
+
+            $("#show").on("click",function(){
+                $("p").show(2000);
+            });
+
+            $("#toggle").on("click",function(){
+                $("p").toggle();
+            });
+
+            $("#fadein").on("click",function(){
+                $("p").fadeIn();
+            });
+            
+            $("#fadeout").on("click",function(){
+                $("p").fadeOut();
+            });
+
+            $("#fadetoggle").on("click",function(){
+                $("p").fadeToggle();
+            });
+
+            $("#fadeto").on("click",function(){
+                $("div").fadeTo("slow",0.5);
+            });
+
+            $("#slidedown").on("click",function(){
+                $("p").slideDown("fast");
+            });
+
+            $("#slideup").on("click",function(){
+                $("p").slideUp("slow");
+            });
+
+            $("#slidetoggle").on("click",function(){
+                $("p").slideToggle();
+            });
+
+            $("#animateone").on("click",function(){
+                $("#mydiv").animate({ left: "200px"});
+            });
+
+            $("#animatetwo").on("click",function(){
+                $("div").animate({left: "200px",
+                height: "+=50px",
+                width: "+=50px"
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ad. Consequuntur iste tempore expedita doloribus inventore, non aspernatur, corrupti sed accusantium et delectus qui esse ad minus temporibus itaque consequatur.`</p>
+
+    <div id="mydiv" style="width: 100px;height: 100px;background-color: red;position: relative;"></div>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+
+    <button id="fadein">Fadein</button>
+    <button id="fadeout">Fadeout</button>
+    <button id="fadetoggle">Fadetoggle</button>
+    <button id="fadeto">FadeTo</button>
+
+    <button id="slidedown">SlideDown</button>
+    <button id="slideup">SlideUp</button>
+    <button id="slidetoggle">SlideToggle</button>
+    <br>
+
+    <button id="animateone">AnimateOne</button>
+    <button id="animatetwo">AnimateTwo</button>
+
+    
+</body>
+</html>
