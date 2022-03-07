@@ -1,0 +1,13 @@
+Javascript
+
+    -HTML / CSS ? JS (inline,external)
+
+
+Ajax
+
+Client -> Server
+
+courses
+- PHP   4000
+- JS    5000
+- Vue   5500

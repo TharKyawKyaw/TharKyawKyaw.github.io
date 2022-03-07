@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping JS</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        let fruits = ['Apple','Banana','Lime','Lemon'];
+        let students=[
+            {name: "mgmg",age: 14, gender: "male"},
+            {name: "susu",age: 14, gender: "female"},
+            {name: "soe",age: 15, gender: "female"},
+            {name: "ngu",age: 16, gender: "female"},
+        ]
+        var data ='';
+        
+        // for (let fruit of fruits) {
+        //     data += `i like ${fruit}`; 
+        // }
+
+        // for([fruit,index] of fruits){
+        //     data += `i like ${index} - ${fruit}`;
+        // }
+
+
+        // for(student of students){
+        //     data += `Age of ${student.name} - ${student.age}\n`;
+        // }
+
+        $.each(fruits,function(i,v){
+            data += `i like ${i} - ${v}\n`;
+        });
+        console.log(data);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

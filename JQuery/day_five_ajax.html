@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5 Ajax</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+            // $.ajax({
+            //     url: "https://api.imgflip.com//get_memes",
+            //     type: "GET",
+            //     dataType: "json"
+            // }).done(function(json){
+            //     console.log(json.data.memes)
+            //     var data = ""
+            //     $.each(json.data.memes,function(i,v){
+            //         data += `<img src="${v.url}" width="100px">`
+            //     })
+
+            //    $("#memes").html(data)
+            // })
+
+            $("#mybtnget").on("click",function(){
+                $.get("https://api.imgflip.com//get_memes",function(response){
+                    var data=""
+                    $.each(response.data.memes,function(i,v){
+                    data += `<img src="${v.url}" width="100">`
+                    })
+                    $("#memes").html(data)
+                })
+            })
+
+            $("#mybtnpost").on("click",function(param){
+                $.post("https://api.imgflip.com/caption_image",{
+                    template_id: "181913649",
+                    username: "TharKyawKyaw",
+                    password: "Tm29041807*",
+                    text0: "Hi",
+                    text1: "Hello",
+                },function(response){
+                    console.log(response)
+                    var img = `<img src="${response.data.url}" width = "500ps">`
+                    $("#memes").html(img)
+                })
+            })
+           
+        })
+    </script>
+</head>
+<body>
+    <button id="mybtnget">GET Method</button>
+    <button id="mybtnpost">POST Method</button>
+    <div id="memes"></div>
+</body>
+</html>

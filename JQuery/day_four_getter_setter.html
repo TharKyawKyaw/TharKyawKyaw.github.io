@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 Getter-Setter</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .para{
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        $(function (param){
+            let students=[
+            {name: "mgmg",age: 14, gender: "male"},
+            {name: "susu",age: 14, gender: "female"},
+            {name: "soe",age: 15, gender: "female"},
+            {name: "ngu",age: 16, gender: "female"},
+            ];
+
+            var data='';
+            $.each(students,function(index,value){
+                data += `
+                <tr>
+                    <td>${++index}</td>
+                    <td>${value.name}</td>
+                    <td>${value.age}</td>
+                    <td>${value.gender}</td>
+                </tr>
+                `
+            })
+
+            $("tbody").html(data);
+
+            $("#myform").on("submit",function(e){
+                e.preventDefault();
+                var username = $("#username").val();
+                console.log(username);
+
+                $("#username").val(username.trim());
+            })
+
+            $("#mybtn").on("click",function(param){
+                //Getter
+                // var text = $("#mylink").text();
+                // var link = $("#mylink").attr('href');
+
+                //Setter
+                $("#mylink").text("Facebook");
+                $("#mylink").attr("href","https://facebook.com");
+                $("#mylink").css({
+                    textDecoration: "none",
+                    color: "red"
+                });
+                // console.log(link);
+            })
+
+            $("#mysecondbtn").on("click",function(param){
+                $("p").addClass("para");
+            })
+        });
+    </script>
+</head>
+<body>
+
+
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+
+    <form action="" id="myform">
+        <input type="text" name="username" id="username"><br>
+        <input type="submit" value="Save">
+    </form>
+
+    <a href="https://google.com" id="mylink">Go Google</a>
+
+    <button id="mybtn">change</button>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor accusamus sit minima voluptate inventore officiis quaerat 
+        a similique sint magni facere ea maxime sed laboriosam, quisquam doloremque rerum ullam odit! Inventore dicta blanditiis in 
+        accusantium sequi? Porro deleniti quisquam fugiat ut.Molestias modi eligendi enim voluptatem dolore magni odit quo?</p>
+
+    <button id="mysecondbtn">Click</button>
+</body>
+</html>
