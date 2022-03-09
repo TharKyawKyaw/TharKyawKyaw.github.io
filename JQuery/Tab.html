@@ -90,7 +90,86 @@
         event.preventDefault();
       })
 
+      //Save to localstorage
+      $(".atc").on("click",function (params) {
+        var name = $(this).data("name");
+        var price = $(this).data("price");
+        var id = $(this).data("id");
+        var item = {
+          id: id,
+          name: name,
+          price: price,
+          qty: 1
+        }
+
+        var cartArr = []
+        var cartStr = localStorage.getItem("mycart");
+
+        if(!cartStr){
+          cartArr.push(item);
+        }else{
+          cartArr = JSON.parse(cartStr);
+          var isOld = false;
+          $.each(cartArr,function(i,v){
+            if(v.id == item.id && !isOld){
+              v.qty += item.qty;
+              isOld = true;
+            }
+          })
+          if(!isOld){
+            cartArr.push(item);
+          }
+          
+        }
+
+        localStorage.setItem("mycart",JSON.stringify(cartArr));
+        cartnoti();
+        showData();
+      })
+
+      //Cart Noti
+      cartnoti();
+
+      function cartnoti(){
+        var cartStr = localStorage.getItem("mycart");
+        var noticount = 0;
+        if(cartStr){
+          var cartArr = JSON.parse(cartStr);
+          $.each(cartArr,function(i,v){
+            noticount += v.qty;
+          })
+        }
+        console.log(noticount);
+        $("#cartnoti").html(noticount);
+      }
+
+      //Cart Table
+      showData();
+
+      function showData(){
+        var cartStr = localStorage.getItem("mycart");
+        var data=""
+        if(cartStr){
+          var cartArr = JSON.parse(cartStr);
+          $.each(cartArr,function(i,v){
+            data += `
+            <tr>
+              <td>${i+1}</td>
+              <td>${v.name}</td>
+              <td>${v.price}</td>
+              <td>${v.qty}</td>
+              <td>${v.price * v.qty}</td>
+            </tr>
+            `
+          })
+        }
+
+        $("#cartbody").html(data);
+      }
+
      })
+
+
   </script>
 </head>
 <body>
@@ -107,6 +186,9 @@
       </li>
       <li>
         <a href="#shop">Shop</a>
+      </li>
+      <li>
+        <a href="#cart">Cart</a><span id="cartnoti" style="color: red;"></span>
       </li>
     </ul>
 
@@ -135,8 +217,8 @@
                   <p>iPhone11</p>
                   <p>1100$</p>
               </div>
-              <div class="addToCart">
-                  <button>Add to Cart</button>
+              <div>
+                  <button class="atc" data-name="iPhone11" data-price="1100" data-id="1">Add to Cart</button>
               </div>
           </div>
         </div>
@@ -147,8 +229,8 @@
                   <p>Luke</p>
                   <p>50$</p>
               </div>
-              <div class="addToCart">
-                  <button>Add to Cart</button>
+              <div>
+                  <button class="atc" data-name="Luke" data-price="50" data-id="2">Add to Cart</button>
               </div>
           </div>
         </div>        
@@ -159,8 +241,8 @@
                   <p>iPhone6</p>
                   <p>499$</p>
               </div>
-              <div class="addToCart">
-                  <button>Add to Cart</button>
+              <div>
+                  <button class="atc" data-name="iPhone6" data-price="499" data-id="3">Add to Cart</button>
               </div>
           </div>
         </div>
@@ -171,8 +253,8 @@
                   <p>iPhone5</p>
                   <p>449$</p>
               </div>
-              <div class="addToCart">
-                  <button>Add to Cart</button>
+              <div>
+                  <button class="atc" data-name="iPhone5" data-price="449" data-id="4">Add to Cart</button>
               </div>
           </div>
         </div><div class="phone_items">
@@ -182,8 +264,8 @@
                   <p>iPhone12</p>
                   <p>1250$</p>
               </div>
-              <div class="addToCart">
-                  <button>Add to Cart</button>
+              <div>
+                  <button class="atc" data-name="iPhone12" data-price="1250" data-id="5">Add to Cart</button>
               </div>
           </div>
         </div><div class="phone_items">
@@ -193,14 +275,31 @@
                   <p>Oscar Nord</p>
                   <p>80$</p>
               </div>
-              <div class="addToCart">
-                  <button>Add to Cart</button>
+              <div>
+                  <button class="atc" data-name="Oscar Nord" data-price="80" data-id="6">Add to Cart</button>
               </div>
           </div>
         </div>
       </div>
     </div>
-    
+
+    <div class="content" id="cart">
+      <h3>Cart Page</h3>
+      <table width="100%" border="1" cellspacing="0">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="cartbody">
+
+        </tbody>
+      </table>
+    </div>
   </div>
 </body>
 </html>

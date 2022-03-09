@@ -21,17 +21,18 @@
 
             //    $("#memes").html(data)
             // })
-            var meme =""
+            var meme=[];
             $("#mybtnget").on("click",function(){
                 $.get("https://api.imgflip.com//get_memes",function(response){
                     var data=""
                     
                     $.each(response.data.memes,function(i,v){
-                        meme += v;
-                        data += `<img src="${v.url}" width="100">`
+                        meme +={
+                            template_id: v.id,
+                            box_count: v.box_count
+                        }
+                        data += `<a href="${v.url}"><img src="${v.url}" width="100"></a>`
                     })
-                    console.log(data);
-                    
                     $("#memes").html(data)
                 })
             })
@@ -50,15 +51,15 @@
                 })
             })
 
-            $("#memes").on("click",function(param){
-                console.log(data);
-            })
         })
+        
     </script>
 </head>
 <body>
     <button id="mybtnget">GET Method</button>
     <button id="mybtnpost">POST Method</button>
-    <div id="memes"></div>
+    <div id="memes">
+        
+    </div>
 </body>
 </html>

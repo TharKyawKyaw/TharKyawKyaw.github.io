@@ -22,6 +22,7 @@
                 localStorage.setItem("Person",JSON.stringify(person))
                 e.preventDefault();
             })
+            
             $(".addtocart").on("click",function(param){
                 var name = $(this).data("name");
                 var price = $(this).data("price");
@@ -41,15 +42,15 @@
                     cartArr.push(item);
                 }else{
                     cartArr = JSON.parse(cartStr);
-                    var isAdd = false;
+                    var isOld = false;
 
                     $.each(cartArr,function(i,v){
-                        if(v.id == item.id && !isAdd){
+                        if(v.id == item.id && !isOld){
                             v.qty += item.qty;
-                            isAdd = true;
+                            isOld = true;
                         }
                     })
-                    if(!isAdd){
+                    if(!isOld){
                         cartArr.push(item);
                     }
                 }
