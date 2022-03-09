@@ -21,17 +21,21 @@
 
             //    $("#memes").html(data)
             // })
-
+            var meme =""
             $("#mybtnget").on("click",function(){
                 $.get("https://api.imgflip.com//get_memes",function(response){
                     var data=""
+                    
                     $.each(response.data.memes,function(i,v){
-                    data += `<img src="${v.url}" width="100">`
+                        meme += v;
+                        data += `<img src="${v.url}" width="100">`
                     })
+                    console.log(data);
+                    
                     $("#memes").html(data)
                 })
             })
-
+            
             $("#mybtnpost").on("click",function(param){
                 $.post("https://api.imgflip.com/caption_image",{
                     template_id: "181913649",
@@ -45,7 +49,10 @@
                     $("#memes").html(img)
                 })
             })
-           
+
+            $("#memes").on("click",function(param){
+                console.log(data);
+            })
         })
     </script>
 </head>

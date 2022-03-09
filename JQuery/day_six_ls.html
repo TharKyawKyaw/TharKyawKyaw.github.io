@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6 LocalStorage</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+
+            $("#myform").on("submit",function(e){
+                var username = $.trim($("#username").val());
+                var age = Number($("#age").val());
+                // console.log(age)
+                // console.log(`${username} - ${age}`)
+                // console.log($.type(age))
+                var person = {
+                    name: username,
+                    age: age
+                }
+                localStorage.setItem("Person",JSON.stringify(person))
+                e.preventDefault();
+            })
+            $(".addtocart").on("click",function(param){
+                var name = $(this).data("name");
+                var price = $(this).data("price");
+                var id = $(this).data("id");
+                var item = {
+                    id: id,
+                    name: name,
+                    price: price,
+                    qty: 1
+                }
+
+                var cartArr =[]
+                
+                var cartStr = localStorage.getItem('cart');
+                console.log(typeof(cartArr));
+                if(!cartStr){
+                    cartArr.push(item);
+                }else{
+                    cartArr = JSON.parse(cartStr);
+                    var isAdd = false;
+
+                    $.each(cartArr,function(i,v){
+                        if(v.id == item.id && !isAdd){
+                            v.qty += item.qty;
+                            isAdd = true;
+                        }
+                    })
+                    if(!isAdd){
+                        cartArr.push(item);
+                    }
+                }
+
+                localStorage.setItem('cart',JSON.stringify(cartArr));
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="" id="myform">
+        <input type="text" name="username" placeholder="Mg Mg" id="username"><br>
+        <input type="number" name="age" id="age"><br>
+        <input type="submit" value="Save">
+    </form>
+
+    <div class="card">
+        <img src="images/oscar_nord.jpg" alt="" width="200px" height="200px">
+        <p>Item One</p>
+        <button class="addtocart" data-name="Item Name" data-price="5000" data-id="1">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="images/oscar_nord.jpg" alt="" width="200px" height="200px">
+        <p>Item Two</p>
+        <button class="addtocart" data-name="Item Name" data-price="4500" data-id="2">Add</button>
+    </div>
+</body>
+</html>

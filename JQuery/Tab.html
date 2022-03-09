@@ -36,6 +36,41 @@
         margin: 0 auto 10px;
         display: none;
     }
+
+    .phones {
+        margin: 10px 50px 10px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 50px 40px;
+    }
+    .phone_items{
+      margin: 10px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.15);
+    }
+    .phone_img{
+      width: 200px;
+      height: 250px
+    }
+    .description{
+      align-items: center;
+      text-align: center;
+      padding-bottom: 10px;
+      color: #0037ff;
+    }
+    .description button {
+      color: #0037ff;
+      top: 250px;
+      padding: 5px;
+      background-color: white;
+      border-radius: 5px;
+    }
+    .description button:hover {
+      background-color: #0037ff;
+      color: white;
+      box-shadow: none;
+    }
   </style>
   <script src="jquery.min.js"></script>
   <script>
@@ -92,6 +127,78 @@
 
     <div class="content" id="shop">
       <h3>Shop Page</h3>
+      <div class="phones">
+        <div class="phone_items">
+          <img src="images/oscar_nord.jpg" class="phone_img">
+          <div class="description">
+              <div class="phone_des">
+                  <p>iPhone11</p>
+                  <p>1100$</p>
+              </div>
+              <div class="addToCart">
+                  <button>Add to Cart</button>
+              </div>
+          </div>
+        </div>
+        <div class="phone_items">
+          <img src="images/luke.jpg" class="phone_img">
+          <div class="description">
+              <div class="phone_des">
+                  <p>Luke</p>
+                  <p>50$</p>
+              </div>
+              <div class="addToCart">
+                  <button>Add to Cart</button>
+              </div>
+          </div>
+        </div>        
+        <div class="phone_items">
+          <img src="images/mike_meyers.jpg" class="phone_img">
+          <div class="description">
+              <div class="phone_des">
+                  <p>iPhone6</p>
+                  <p>499$</p>
+              </div>
+              <div class="addToCart">
+                  <button>Add to Cart</button>
+              </div>
+          </div>
+        </div>
+        <div class="phone_items">
+          <img src="images/neonbrand.jpg" class="phone_img">
+          <div class="description">
+              <div class="phone_des">
+                  <p>iPhone5</p>
+                  <p>449$</p>
+              </div>
+              <div class="addToCart">
+                  <button>Add to Cart</button>
+              </div>
+          </div>
+        </div><div class="phone_items">
+          <img src="images/rishabh_malhotra.jpg" class="phone_img">
+          <div class="description">
+              <div class="phone_des">
+                  <p>iPhone12</p>
+                  <p>1250$</p>
+              </div>
+              <div class="addToCart">
+                  <button>Add to Cart</button>
+              </div>
+          </div>
+        </div><div class="phone_items">
+          <img src="images/vojtech.jpg" class="phone_img">
+          <div class="description">
+              <div class="phone_des">
+                  <p>Oscar Nord</p>
+                  <p>80$</p>
+              </div>
+              <div class="addToCart">
+                  <button>Add to Cart</button>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
     
   </div>

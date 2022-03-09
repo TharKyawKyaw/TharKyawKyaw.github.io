@@ -34,9 +34,9 @@
                 `
             })
 
-            $("tbody").html(data);
+                $("tbody").html(data);
 
-            $("#myform").on("submit",function(e){
+                $("#myform").on("submit",function(e){
                 e.preventDefault();
                 var username = $("#username").val();
                 console.log(username);
@@ -44,20 +44,20 @@
                 $("#username").val(username.trim());
             })
 
-            $("#mybtn").on("click",function(param){
-                //Getter
-                // var text = $("#mylink").text();
-                // var link = $("#mylink").attr('href');
+                $("#mybtn").on("click",function(param){
+                    //Getter
+                    // var text = $("#mylink").text();
+                    // var link = $("#mylink").attr('href');
 
-                //Setter
-                $("#mylink").text("Facebook");
-                $("#mylink").attr("href","https://facebook.com");
-                $("#mylink").css({
-                    textDecoration: "none",
-                    color: "red"
-                });
-                // console.log(link);
-            })
+                    //Setter
+                    $("#mylink").text("Facebook");
+                    $("#mylink").attr("href","https://facebook.com");
+                    $("#mylink").css({
+                        textDecoration: "none",
+                        color: "red"
+                    });
+                    // console.log(link);
+                })
 
             $("#mysecondbtn").on("click",function(param){
                 $("p").addClass("para");
