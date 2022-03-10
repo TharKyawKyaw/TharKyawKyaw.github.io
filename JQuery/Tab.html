@@ -100,11 +100,7 @@
         var name = $(this).data("name");
         var price = $(this).data("price");
         var id = $(this).data("id");
-        Swal.fire({
-          position: 'center',
-          title: 'Already Add',
-          icon: 'success'
-        })
+        
         var item = {
           id: id,
           name: name,
@@ -135,6 +131,12 @@
         localStorage.setItem("mycart",JSON.stringify(cartArr));
         cartnoti();
         showData();
+
+        Swal.fire({
+          position: 'center',
+          title: 'Already Add',
+          icon: 'success'
+        })
       })
 
       //Cart Noti
@@ -189,18 +191,39 @@
 
       //Delete Row
       $("#cartbody").on("click",".btndel",function(param){
-        var option = confirm('Are you sure?');
-        if(option){
-          // alert('please delete!')
-          var index = $(this).data("index");
-          var cartStr = localStorage.getItem("mycart");
-          var cartArr = JSON.parse(cartStr);
-          cartArr.splice(index,1);
-          localStorage.setItem("mycart",JSON.stringify(cartArr));
-          cartnoti();
-          showData();
-        }
+        // var option = confirm('Are you sure?');
+        // if(option){
+        //   // alert('please delete!')
+          
+        // }
+
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+            var index = $(this).data("index");
+            var cartStr = localStorage.getItem("mycart");
+            var cartArr = JSON.parse(cartStr);
+            cartArr.splice(index,1);
+            localStorage.setItem("mycart",JSON.stringify(cartArr));
+            cartnoti();
+            showData();
+            Swal.fire(
+              'Deleted!',
+              'Your file has been deleted.',
+              'success'
+            )
+          }
+        })
       })
+
+
 
       //Add or Minus Qty
       $("#cartbody").on("change",".changeqty",function(param){
