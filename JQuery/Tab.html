@@ -72,7 +72,12 @@
       box-shadow: none;
     }
   </style>
+  
+
+  <link rel="stylesheet" href="sweetalert2.min.css" type="text/css">
+  <script src="sweetalert2.min.js"></script>
   <script src="jquery.min.js"></script>
+
   <script>
     $(function (param) { 
 
@@ -95,6 +100,11 @@
         var name = $(this).data("name");
         var price = $(this).data("price");
         var id = $(this).data("id");
+        Swal.fire({
+          position: 'center',
+          title: 'Already Add',
+          icon: 'success'
+        })
         var item = {
           id: id,
           name: name,
@@ -139,7 +149,6 @@
             noticount += v.qty;
           })
         }
-        console.log(noticount);
         $("#cartnoti").html(noticount);
       }
 
@@ -151,22 +160,64 @@
         var data=""
         if(cartStr){
           var cartArr = JSON.parse(cartStr);
+          var allTotal = 0;
           $.each(cartArr,function(i,v){
+            allTotal += v.price * v.qty;
             data += `
             <tr>
-              <td>${i+1}</td>
+              <td>${i+1} <button class="btndel" data-index="${i}">X</button></td>
               <td>${v.name}</td>
-              <td>${v.price}</td>
-              <td>${v.qty}</td>
-              <td>${v.price * v.qty}</td>
+              <td>${priceFormat(v.price)}</td>
+              <td>
+                <input type="number" value="${v.qty}" min="1" class="changeqty" data-index=${i}>
+                </td>
+              <td>${priceFormat(v.price * v.qty)}</td>
             </tr>
             `
           })
+
+          data += `
+            <tr>
+              <td colspan="4">Total</td>
+              <td>${priceFormat(allTotal)}</td>
+            </tr>
+          `
         }
 
         $("#cartbody").html(data);
       }
 
+      //Delete Row
+      $("#cartbody").on("click",".btndel",function(param){
+        var option = confirm('Are you sure?');
+        if(option){
+          // alert('please delete!')
+          var index = $(this).data("index");
+          var cartStr = localStorage.getItem("mycart");
+          var cartArr = JSON.parse(cartStr);
+          cartArr.splice(index,1);
+          localStorage.setItem("mycart",JSON.stringify(cartArr));
+          cartnoti();
+          showData();
+        }
+      })
+
+      //Add or Minus Qty
+      $("#cartbody").on("change",".changeqty",function(param){
+        var qty = Number($(this).val());
+        var index = $(this).data("index");
+        var cartStr = localStorage.getItem("mycart");
+        var cartArr = JSON.parse(cartStr);
+        cartArr[index].qty = qty;
+        localStorage.setItem("mycart",JSON.stringify(cartArr));
+        cartnoti();
+        showData();
+        
+      })
+      //Price 
+      function priceFormat(price){
+        return (price).toLocaleString()
+      }
      })
 
 
@@ -215,7 +266,7 @@
           <div class="description">
               <div class="phone_des">
                   <p>iPhone11</p>
-                  <p>1100$</p>
+                  <p>1500$</p>
               </div>
               <div>
                   <button class="atc" data-name="iPhone11" data-price="1100" data-id="1">Add to Cart</button>
@@ -227,7 +278,7 @@
           <div class="description">
               <div class="phone_des">
                   <p>Luke</p>
-                  <p>50$</p>
+                  <p>1000$</p>
               </div>
               <div>
                   <button class="atc" data-name="Luke" data-price="50" data-id="2">Add to Cart</button>
@@ -239,7 +290,7 @@
           <div class="description">
               <div class="phone_des">
                   <p>iPhone6</p>
-                  <p>499$</p>
+                  <p>1100$</p>
               </div>
               <div>
                   <button class="atc" data-name="iPhone6" data-price="499" data-id="3">Add to Cart</button>
@@ -251,7 +302,7 @@
           <div class="description">
               <div class="phone_des">
                   <p>iPhone5</p>
-                  <p>449$</p>
+                  <p>1200$</p>
               </div>
               <div>
                   <button class="atc" data-name="iPhone5" data-price="449" data-id="4">Add to Cart</button>
@@ -273,7 +324,7 @@
           <div class="description">
               <div class="phone_des">
                   <p>Oscar Nord</p>
-                  <p>80$</p>
+                  <p>800$</p>
               </div>
               <div>
                   <button class="atc" data-name="Oscar Nord" data-price="80" data-id="6">Add to Cart</button>
