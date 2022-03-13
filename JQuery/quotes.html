@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <style>
+        body{
+            justify-content: center;
+            margin-top: 50px;
+        }
+        #quotes{
+            height: 300px;
+            width: 80%;
+            margin: auto;
+            border-radius: 5px;
+            box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.15);
+        }
+        .quote{
+            width: 50%;
+            margin: auto;
+            justify-content: center;
+            padding-top: 15px;
+        }
+        .text{
+            text-align: center;
+        }
+        .author{
+            text-align: right;
+        }
+        #btn{
+            height: 75px;
+            position: relative;
+        }
+        #center{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .mybtn{
+            color: red;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+            $.ajax({
+                url: "https://type.fit/api/quotes",
+                type: "GET",
+                dataType: "json"
+            }).done(function(json){
+
+                var data = "";
+                var count=0;
+                var quoteArr =[]
+                $.each(json,function(i,v){
+                    count++;
+                    var quote ={
+                        text: v.text,
+                        author: v.author,
+                    }
+                    quoteArr.push(quote);
+                })
+                localStorage.setItem('quotes',JSON.stringify(quoteArr));
+                var randNo  = Math.floor(Math.random() * quoteArr.length);
+                console.log(randNo);
+               data =`
+                    <div class="quote">
+                        <h1 class="text">${quoteArr[randNo].text}</h1>
+                        <h3 class="author">${quoteArr[randNo].author}</h3>
+
+                    </div>
+                    
+                    `
+                $("#quotes").html(data);
+            })
+
+            $(".mybtn").on('click',function(param){
+                var quoteStr = localStorage.getItem('quotes');
+                var quoteArr = JSON.parse(quoteStr);
+                var randNo  = Math.floor(Math.random() * quoteArr.length);
+                var data =`
+                    <div class="quote">
+                        <h1 class="text">${quoteArr[randNo].text}</h1>
+                        <h3 class="author">${quoteArr[randNo].author}</h3>
+
+                    </div>
+                    
+                    `
+                $("#quotes").html(data);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="quotes">
+
+    </div>
+    <div id="btn">
+        <div id="center">
+            <button class="mybtn">Next Quote</button>
+        </div>
+    </div>
+</body>
+</html>
