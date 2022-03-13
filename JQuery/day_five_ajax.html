@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day5 Ajax</title>
     <script src="jquery.min.js"></script>
+
     <script>
         $(function(param){
             // $.ajax({
@@ -27,14 +28,13 @@
                     var data=""
                     
                     $.each(response.data.memes,function(i,v){
-                        meme +={
-                            template_id: v.id,
-                            box_count: v.box_count
-                        }
-                        data += `<a href="${v.url}"><img src="${v.url}" width="100"></a>`
+                        meme.push(v.id);
+                        data += `<img src="${v.url}" width="100">`
                     })
                     $("#memes").html(data)
+                    console.log(meme);
                 })
+                
             })
             
             $("#mybtnpost").on("click",function(param){

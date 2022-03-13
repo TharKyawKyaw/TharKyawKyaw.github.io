@@ -1,6 +1,6 @@
 Javascript
 
-    -HTML / CSS ? JS (inline,external)
+-HTML / CSS ? JS (inline,external)
 
 
 Ajax
@@ -11,3 +11,10 @@ courses
 - PHP   4000
 - JS    5000
 - Vue   5500
+
+
+Projects
+    - Tab & Shop (LocalStorage)
+    - Memes (Ajax)
+    - Quotes (Ajax)
+    - All Countries (Ajax)

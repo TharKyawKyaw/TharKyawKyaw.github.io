@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries</title>
+    <style>
+        body{
+            background-color: rgb(34, 29, 29);
+
+
+            /* margin: 20px; */
+        }
+        #countries{
+            display: grid;
+            grid-template-columns: 470px 470px 470px;
+            grid-gap: 20px 20px;
+            margin: auto;
+            height: 172.23px;
+            justify-content: center;
+        }
+        .flag_img{
+            float: left;
+            width: 50%;
+            height: 172.23px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.15);
+        }
+        .country{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 20px;
+        }
+        .content{
+            position: relative;
+            justify-content: center;
+            /* text-align: left; */
+            left: 10px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(param){
+            $.ajax({
+                
+                url: "https://restcountries.com/v3.1/all",
+                type: "GET",
+                dataType: "json"
+            }).done(function(json){
+                console.log(json);
+                var data = ""
+                $.each(json,function(i,v){
+                    data += `<div class="country">
+                                <img src="${v.flags.png}"  class="flag_img"></img>
+                                <div class="content">
+                                    <h3>${v.name.common}</h3>
+                                    <p>City: ${v.country}</p>
+                                    <p>Region: ${v.region}</p>
+                                    <p>Population: ${v.population}</p>
+                                </div>
+                                
+                             </div>`
+                    
+                })
+
+               $("#countries").html(data)
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <div id="countries">
+
+    </div>
+</body>
+</html>
