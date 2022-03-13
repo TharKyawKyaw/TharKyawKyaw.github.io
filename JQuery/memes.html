@@ -8,24 +8,34 @@
     <script src="jquery.min.js"></script>
     <style>
         #memes{
-            margin: 10px 50px 10px;
             display: grid;
-            grid-template-columns: auto auto auto;
-            grid-gap: 50px 40px;
-
+            grid-template-columns: 465px 465px 465px;
+            grid-gap: 20px 20px;
+            margin: auto;
+            height: 200px;
+            justify-content: center;
         }
-        img {
+        .memeImg {
             width: 200px;
             height: 200px;
+            float: left;
         }
         .useBtn{
             width: 70px;
             height: 25px;
+            position: relative;
+            left: 20px;
+            top: 100px;
         }
         .meme{
-            background-color: grey;
+            background-color: rgb(54, 87, 87);
             border-radius: 10px;
             box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.15);
+        }
+        .name{
+            position: relative;
+            left: 20px;
+            color: white;
         }
     </style>
 
@@ -43,47 +53,70 @@
                 var data = ""
                 $.each(json.data.memes,function(i,v){
                     data += `<div class="meme">
-                            <img src="${v.url}">
-                            <button class="useBtn" data-id="${v.id}" data-count="${v.box_count}">Use This</button>
+                            <img src="${v.url}" class="memeImg">
+                            <div>
+                                <p class="name">${v.name}</p>
+                                <button class="useBtn" data-id="${v.id}" data-count="${v.box_count}">Use This</button>
+                            </div>
                         </div>`
                     
                 })
 
                $("#memes").html(data)
             })
-            // $("#mybtnget").on("click",function(){
-            //     $.get("https://api.imgflip.com//get_memes",function(response){
-            //         var data=""
-                    
-            //         $.each(response.data.memes,function(i,v){
-            //             meme.push(v.id);
-            //             data += `<div>
-            //                 <img src="${v.url}">
-            //                 <button class="useBtn" data-id="${v.id}" data-count="${v.box_count}">Use This</button>
-            //             </div>`
-            //         })
-            //         $("#memes").html(data)
-            //         // console.log(meme);
-            //     })
-                
-            // })
 
             $("#memes").on("click","button",function(param) {
                 var id = $(this).data("id");
                 var count= $(this).data("count");
-
+                var memeText=[]
                 for(var i=0;i<count;i++){
-                    let text1 = prompt(`Enter comment`)
+                    let text1 = prompt(`Enter meme text`)
+                    memeText.push(text1);
                 }
+
+                $.each(memeText,function(i,v){
+
+                })
+                $.post("https://api.imgflip.com/caption_image",{
+                    template_id: id,
+                    username: "TharKyawKyaw",
+                    password: "Tm29041807*",
+                    max_font_size: "25px",
+                    boxes: [
+                        {
+                        "text": memeText[0],
+                        },{
+                        "text": memeText[1],
+                        },{
+                        "text": memeText[2],
+                        },{
+                        "text": memeText[3],
+                        },{
+                        "text": memeText[4],
+                        },{
+                        "text": memeText[5],
+                        },{
+                        "text": memeText[6],
+                        },{
+                        "text": memeText[7],
+                        },{
+                        "text": memeText[8],
+                        },
+                ,]
+               
+            },function(response){
+
+                    var img = `<img src="${response.data.url}" width = "100%">`
+                    $("#memes").html(img)
+                })
             })
-            
+  
         })
     </script>
 </head>
 <body>
-    <!-- <button id="mybtnget">Get Memes</button> -->
     <div id="memes">
-        
     </div>
+
 </body>
 </html>
