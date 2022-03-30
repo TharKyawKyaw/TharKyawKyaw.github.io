@@ -1,0 +1,5 @@
+1. assets > js > jquery.min.js file လေးလာထည့်ပေးပါ
+2. assets > css > style.css <- new file လေးယူပေးပါ
+3. fonts.google.com မှာ poppin font လေး down ပြီး assets ဆိုတဲ့ folder အောက်မှာ zip ဖြည့်ပြီးထည့်ပေးပါ။
+4. style.css မှာ poppin font လေးကို ချိတ်ပေးပါ
+5. index.html မှာ style.css နဲ့  jquery.min.js လေးချိတ်ပေးပါ

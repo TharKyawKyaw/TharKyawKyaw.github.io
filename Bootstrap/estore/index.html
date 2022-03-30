@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Mart</title>
+
+
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    
+        <!-- Top Header -->
+        <div class="border-bottom" id="topheader">
+            <div class="container">
+                <div class="row px-lg-5 font-color align-items-center">
+                    <div class="col-lg-8 col-md-6 col-sm-12 col-12">
+                        <p class="text-uppercase text-lg-start text-center pt-2">Welcome to our shop!</p>
+                    </div>
+                    <div class="col-lg-4 col-md6 col-sm-12 col-12 text-lg-end text-center">
+                        <div class="row text-center">
+                            <div class="col-5">
+                                <a href="" class="text-decoration-none font-color">
+                                    <i class="fa-solid fa-location-pin fa-xs"></i>
+                                    <small>Select Location</small>
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a href="" class="text-decoration-none font-color">
+                                    <i class="fa-solid fa-right-to-bracket fa-xs"></i>
+                                    <small>Login</small>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="" class="text-decoration-none font-color">
+                                    <i class="fa-solid fa-right-from-bracket fa-xs"></i>
+                                    <small>Register</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Bottom -->
+        <div id="headerbottom" class="my-md-4 my-3">
+            <div class="container">
+                <div class="row px-lg-5 align-items-baseline">
+                    <div class="col-lg-3 col-md-4">
+                        <h3>
+                            <span class="primary-color">E</span>lectronic <span class="primary-color">M</span>art
+                        </h3>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                        <div class="row align-items-baseline">
+                            <div class="col-lg-9 col-md-8">
+                                <div class="input-group mb-3">                                    
+                                    <input type="text" class="form-control py-3" placeholder="Search for products, brands and more" aria-label="Username" aria-describedby="basic-addon1">
+                                    <span class="input-group-text px-5  searchBtn" id="basic-addon1"><i class="fa-solid fa-magnifying-glass fa-lg"></i></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="d-flex bd-highlight">
+                                    <div class="p-2 flex-fill bd-highlight">
+                                        <a href="" class="text-decoration-none text-dark">
+                                            <i class="fa-regular fa-moon fa-xl"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 flex-fill bd-highlight">
+                                        <a href="" class="text-decoration-none text-dark">
+                                            <i class="fa-regular fa-heart fa-xl"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 flex-fill bd-highlight">
+                                        <a href="" class="text-decoration-none text-dark">
+                                            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                                            Cart
+                                        </a>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div id="navigation">
+            <nav class="navbar navbar-expand-lg navbar-dark custom-bg-secondary-color">
+                <div class="container px-lg-5">
+                    <div class="dropdown ms-lg-3">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            All Categories
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Television</a></li>
+                            <li><a class="dropdown-item" href="#">Headphones</a></li>
+                            <li><a class="dropdown-item" href="#">Computer</a></li>
+                            <li><a class="dropdown-item" href="#">Appliances</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile</a></li>
+                            <li><a class="dropdown-item" href="#">TV $ Video</a></li>
+                            <li><a class="dropdown-item" href="#">iPad & Tablets</a></li>
+                            <li><a class="dropdown-item" href="#">Cameras & Camcorders</a></li>
+                            <li><a class="dropdown-item" href="#">Home Audio & Theater</a></li>
+                        </ul>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-white">
+                            <li class="nav-item me-lg-3">
+                                <a class="nav-link active text-uppercase" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item dropdown me-lg-3">
+                                <a class="nav-link dropdown-toggle  text-uppercase" href="#" id="navbarElectronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Electronics
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarElectronicsDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown me-lg-3">
+                                <a class="nav-link dropdown-toggle  text-uppercase" href="#" id="navbarAppliancesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Appliances
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarAppliancesDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item me-lg-3">
+                                <a class="nav-link  text-uppercase" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item me-lg-3">
+                                <a class="nav-link  text-uppercase" href="#">New Arrivals</a>
+                            </li>
+                            <li class="nav-item dropdown me-lg-3">
+                                <a class="nav-link dropdown-toggle  text-uppercase" href="#" id="navbarPagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarPagesDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item me-lg-3">
+                                <a class="nav-link text-uppercase">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Banner -->
+        <div id="banner">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active banner1-item">
+                        <div class="banner-style d-flex align-items-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                        <div class="carousel-caption-banner">
+                                            <p>Get flat<span class="fs-6"> 10% </span>Cashback</p>
+                                            <h1>EXCITING DEALS ON TELEVISIONS</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item banner2-item">
+                        <div class="banner-style d-flex align-items-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                        <div class="carousel-caption-banner">
+                                            <p>Get flat<span class="fs-6"> 10% </span>Cashback</p>
+                                            <h1>EXCITING DEALS ON TELEVISIONS</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item banner3-item">
+                        <div class="banner-style d-flex align-items-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                        <div class="carousel-caption-banner">
+                                            <p>Get flat<span class="fs-6"> 10% </span>Cashback</p>
+                                            <h1>EXCITING DEALS ON TELEVISIONS</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item banner4-item">
+                        <div class="banner-style d-flex align-items-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                                        <div class="carousel-caption-banner">
+                                            <p>Get flat<span class="fs-6"> 10% </span>Cashback</p>
+                                            <h1>EXCITING DEALS ON TELEVISIONS</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+
+        <!-- Our Products  -->
+        <div id="products" class="py-5">
+            <div class="container">
+                <div class="row px-lg-5">
+                    <div class="col-12">
+                        <h1 class="text-center">Our Products</h1>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 bg-light px-4 py-5">
+                        <div id="review" class="mb-4">
+                            <h5 class="text-uppercase">Customer Review</h5>
+                            <ul class="list-group"> 
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    5.0
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    4.0
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star-half text-warning"></i>
+                                    3.5
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    3.0
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                    <i class="fa-solid fa-star-half text-warning"></i>
+                                    2.5
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="price" class="mb-4">
+                            <h5 class="text-uppercase">Price</h5>
+                            <ul class="list-group"> 
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    Under $1,000
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    $1,000 - $5,000
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    $5,000 - $10,000
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    $10,000 - $20,000
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    $20,000 - $30,000
+                                </li>
+                                <li class="list-group-item border-0 bg-transparent ps-0">
+                                    Over $30,000
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="discont" class="mb-4">
+                            <h5 class="text-uppercase">Discount</h5>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="fivePercentCheck">
+                                <label class="form-check-label" for="fivePercentCheck">
+                                    5% or More
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="tenPercentCheck">
+                                <label class="form-check-label" for="tenPercentCheck">
+                                    10% or More
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="twentyPercentCheck">
+                                <label class="form-check-label" for="twentyPercentCheck">
+                                    20% or More
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="thirtyPercentCheck">
+                                <label class="form-check-label" for="thirtyPercentCheck">
+                                    30% or More
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="fiftyPercentCheck">
+                                <label class="form-check-label" for="fiftyPercentCheck">
+                                    50% or More
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="sixtyPercentCheck">
+                                <label class="form-check-label" for="sixtyPercentCheck">
+                                    60% or More
+                                </label>
+                            </div>
+                        </div>
+                        <div id="electronics" class="mb-4">
+                            <h5 class="text-uppercase">Electronics</h5>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="accessoriesCheck">
+                                <label class="form-check-label" for="accessoriesCheck">
+                                    Accessories
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="cameraCheck">
+                                <label class="form-check-label" for="cameraCheck">
+                                    Cameras & Photography
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="carCheck">
+                                <label class="form-check-label" for="carCheck">
+                                    Car & Vehicle Electronics
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="computerCheck">
+                                <label class="form-check-label" for="computerCheck">
+                                    Computer & Accessories
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="gpsCheck">
+                                <label class="form-check-label" for="gpsCheck">
+                                    GPS & Accessories
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="headphoneCheck">
+                                <label class="form-check-label" for="headphoneCheck">
+                                    Headphones
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="homeAudioCheck">
+                                <label class="form-check-label" for="homeAudioCheck">
+                                    Home Audio
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="theaterCheck">
+                                <label class="form-check-label" for="theaterCheck">
+                                    Home Theater, TV & Video
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="mobileCheck">
+                                <label class="form-check-label" for="mobileCheck">
+                                    Mobiles & Accessories
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="portableCheck">
+                                <label class="form-check-label" for="portableCheck">
+                                    Protable Media Players
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="tabletCheck">
+                                <label class="form-check-label" for="tabletCheck">
+                                    Tablets
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="telephoneCheck">
+                                <label class="form-check-label" for="telephoneCheck">
+                                    Telephones & Accessories
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="wearableCheck">
+                                <label class="form-check-label" for="wearableCheck">
+                                    Wearable Technology
+                                </label>
+                            </div>
+
+                        </div>
+                        <div id="cashondelivery" class="mb-4">
+                            <h5 class="text-uppercase">CashOnDelivery</h5>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="codCheck">
+                                <label class="form-check-label" for="codCheck">
+                                    Eligible for Cash On Delivery
+                                </label>
+                            </div>
+
+                        </div>
+                        <div id="newarrival" class="mb-4">
+                            <h5 class="text-uppercase">NewArrivals</h5>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="thirtydaysCheck">
+                                <label class="form-check-label" for="thirtydaysCheck">
+                                    Last 30 days
+                                </label>
+                            </div>
+                            <div class="form-check my-2">
+                                <input class="form-check-input" type="checkbox" value="" id="nietydaysCheck">
+                                <label class="form-check-label" for="nietydaysCheck">
+                                    Last 90 days
+                                </label>
+                            </div>
+
+                        </div>
+                        <div id="bestseller" class="mb-4">
+                            <h5 class="text-uppercase">
+                                <span class="border-bottom border-secondary border-3">Best</span>
+                                Seller
+                            </h5>
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <img src="assets/images/item2.png" class="img-fluid" alt="..." >
+                                </div>
+                                <div class="col-8">
+                                    <div class="card border-0 bg-transparent">
+                                        <div class="card-body px-lg-0">
+                                            
+                                            <p class="card-text">
+                                                Samsung 192 L Direct Cool Single Door 3 Star (2021) Refrigerator
+                                            </p>
+                                            <h5 class="card-title my-4">$12,990.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-4">
+                                    <img src="assets/images/item2.png" class="img-fluid" alt="..." >
+                                </div>
+                                <div class="col-8">
+                                    <div class="card border-0 bg-transparent">
+                                        <div class="card-body px-lg-0">
+                                            
+                                            <p class="card-text">
+                                                Samsung 192 L Direct Cool Single Door 3 Star (2021) Refrigerator
+                                            </p>
+                                            <h5 class="card-title my-4">$1,190.00</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item1.png" class="card-img-top w-25 mx-auto m-5" alt="...">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Redmi 9 Prime</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$200.00</span>
+                                            <small class="text-decoration-line-through text-muted">$280.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item2.png" class="card-img-top w-25 mx-auto m-5 position-relative" alt="...">
+                                    <span class="product-new-badge">
+                                        New
+                                    </span>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Refrigerator</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$230.00</span>
+                                            <small class="text-decoration-line-through text-muted">$250.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item3.png" class="card-img-top w-25 mx-auto m-5" alt="...">
+                                    <span class="product-new-badge2">
+                                        New
+                                    </span>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Apple iPhone 11</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$280.00</span>
+                                            <small class="text-decoration-line-through text-muted">$300.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item4.png" class="card-img-top w-50 mx-auto m-5" alt="...">
+                                    <span class="product-new-badge">
+                                        New
+                                    </span>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Mi 4A Horizon</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$320.00</span>
+                                            <small class="text-decoration-line-through text-muted">$340.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item5.png" class="card-img-top w-50 mx-auto m-5" alt="...">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Smart AC with Wi-fi</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$349.00</span>
+                                            <small class="text-decoration-line-through text-muted">$399.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item6.png" class="card-img-top w-50 mx-auto m-5" alt="...">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Microwave Oven</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$249.00</span>
+                                            <small class="text-decoration-line-through text-muted">$300.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row bg-warning rounded-3 mx-1 my-4 align-items-center">
+                            <div class="col-4">
+                                <h1 class="text-white ps-3">Exiciting Deals</h1>
+                            </div>
+                            <div class="col-8">
+                                <img src="assets/images/ad1.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item7.png" class="card-img-top w-25 mx-auto m-5" alt="...">
+                                    <span class="product-new-badge">
+                                        New
+                                    </span>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Desert Air Cooler</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$230.00</span>
+                                            <small class="text-decoration-line-through text-muted">$280.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item8.png" class="card-img-top w-25 mx-auto m-5" alt="...">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Auto Washing Machine</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$180.00</span>
+                                            <small class="text-decoration-line-through text-muted">$200.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item9.png" class="card-img-top w-25 mx-auto m-5" alt="...">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Water Purifier</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$199.00</span>
+                                            <small class="text-decoration-line-through text-muted">$299.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item10.png" class="card-img-top w-50 mx-auto m-5" alt="...">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Panasonic Tab 8</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$499.00</span>
+                                            <small class="text-decoration-line-through text-muted">$599.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item11.png" class="card-img-top w-50 mx-auto m-5" alt="...">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Lenovo Yoga Tab</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$599.00</span>
+                                            <small class="text-decoration-line-through text-muted">$699.00</small>
+                                            
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow p">
+                                    <img src="assets/images/item12.png" class="card-img-top w-50 mx-auto m-5" alt="...">
+                                    <span class="product-new-badge2">
+                                        New
+                                    </span>
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">Samsung Galaxy Tab</h5>
+                                        <p class="card-text">
+                                            <span class="text-dark">$699.00</span>
+                                            <small class="text-decoration-line-through text-muted">$899.00</small>
+                                        </p>
+                                        <div class="d-grid gap-2 col-8 mx-auto">
+                                            <button class="btn btn-primary text-uppercase addtocartBtn" type="button">Add To Cart</button>
+                                          </div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ads -->
+        <div id="ads"> 
+            <div class="advertisement bg-warning px-lg-5">
+                <div class="container px-lg-5">
+                    <div class="row">
+                        <div class="col-6 py-5">
+                            <div class="row bg-white rounded-3 mx-1 my-5 align-items-center py-4">
+                                <div class="col-8">
+                                    <small class="ps-2">New Collections, New Trendy</small>
+                                    <h3 class="text-dark ps-2">Smart Watches</h3>
+                                    <small class="ps-2">Sale up to 25% off all in store</small>
+                                </div>
+                                <div class="col-4">
+                                    <img src="assets/images/ad2.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 py-5">
+                            <div class="row bg-white rounded-3 mx-1 my-5 align-items-center py-4">
+                                <div class="col-8">
+                                    <small class="ps-2">top Brands, lowest Prices</small>
+                                    <h3 class="text-dark ps-2">Smart Phones</h3>
+                                    <small class="ps-2">Free shipping order over $100</small>
+                                </div>
+                                <div class="col-4">
+                                    <img src="assets/images/ad3.png" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--  -->
+        <div id="delivery" class="py-5">
+            <div class="container">
+                <div class="row px-lg-5">
+                    <h4>Electronics :</h4>
+                    <p>If you're considering a new laptop, looking for a powerful new car stereo or shoppng for a new HDTV,
+                        we make it easy to find exactly what you need at a price you can afford. We offer Every Day Low Prices
+                        on TVs, laptops, cell phones, tablets, and iPads, video games, desktop computers, cameras and camcorders,
+                        audio, video and more.
+                    </p>
+                    <div class="col-px-4 col-lg-4 col-md-4 pt-3">
+                        <div class="row align-items-center">
+                            <div class="col-2 px-auto">
+                                <i class="fa-solid fa-dolly text-warning fa-2x"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5>Free Shipping</h5>
+                                <span>on orders over $100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-px-4 col-lg-4 col-md-4 pt-3">
+                        <div class="row align-items-center">
+                            <div class="col-2 px-auto">
+                                <i class="fa-solid fa-truck-fast text-warning fa-2x"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5>Fast Delivery</h5>
+                                <span>World Wide</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-px-4 col-lg-4 col-md-4 pt-3">
+                        <div class="row align-items-center">
+                            <div class="col-2 px-auto">
+                                <i class="fa-regular fa-thumbs-up text-warning fa-3x"></i>
+                            </div>
+                            <div class="col-10">
+                                <h5>Big Choice</h5>
+                                <span>of Products</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

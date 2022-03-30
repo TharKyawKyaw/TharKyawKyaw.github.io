@@ -1,0 +1,138 @@
+/* Offline fonts */
+@font-face {
+  src: url(../fonts/Poppins-Regular.ttf);
+  font-family: poppins_regular;
+}
+@font-face {
+  src: url(../fonts/Poppins-Bold.ttf);
+  font-family: poppins_bold;
+}
+@font-face {
+  src: url(../fonts/Poppins-Black.ttf);
+  font-family: poppins_black;
+}
+
+body {
+  font-family: poppins_regular !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: poppins_bold !important;
+}
+
+.primary-color {
+  color: #fdb03d;
+}
+
+.secondary-color {
+  color: #292560;
+}
+
+.custom-bg-secondary-color {
+  background-color: #292560;
+}
+
+.font-color {
+  color: #707070;
+}
+
+#topheader a:hover {
+  color: #fdb03d;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+#headerbottom .searchBtn {
+  background-color: #fdb03d;
+  color: #fff;
+  border-color: #fdb03d;
+}
+
+#headerbottom .searchBtn:hover {
+  color: #292560;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 15px;
+  font-family: poppins_bold;
+}
+
+.navbar-dark .navbar-nav .active {
+  color: #fdb03d !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fdb03d !important;
+  transition: 0.5s all;
+}
+
+#banner .banner1-item {
+  background-image: url("../images/banner1.png");
+  background-size: cover;
+}
+#banner .banner2-item {
+  background-image: url("../images/banner2.png");
+  background-size: cover;
+}
+#banner .banner3-item {
+  background-image: url("../images/banner3.png");
+  background-size: cover;
+}
+#banner .banner4-item {
+  background-image: url("../images/banner4.png");
+  background-size: cover;
+}
+
+#banner .banner-style {
+  min-height: 70vh;
+}
+
+.addtocartBtn {
+  background-color: #292560;
+  border-color: #292560;
+  transition: 0.5s all;
+}
+
+.addtocartBtn:hover {
+  background-color: #fdb03d;
+  border-color: #fdb03d;
+  transition: 0.5s all;
+}
+
+.product-new-badge {
+  background-color: #ff2978;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 12px;
+  left: 13px;
+  top: 15px;
+}
+
+.product-new-badge2 {
+  background-color: #fdb03d;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 12px;
+  left: 13px;
+  top: 15px;
+}

@@ -1,0 +1,20 @@
+1.B
+	It is just simple in color better to look.
+	
+2.B
+	It has less text and user can see simple design.
+	
+3.B
+	Buttons are easy to use cause they have different color such as usually use button ( LOGIN ME ) is more dark color than only once use button ( SIGN UP ).And forgot password is just text is better than button style.
+
+4.B
+	Icons designs are all same so it is simple and nice.
+	
+5.A
+	Header should be just in one line to look i think B also good at center with two lines but header has "." so it is better in one line.
+	
+6.B
+	When password is in error it is better show log as Password incorrect.And reset password is most need function when password incorrect cause user can be forgot password.
+	
+7.A
+	I think in B labels as (Score , Reviewe) are useless labels so i think A is simple can user can understand easily.

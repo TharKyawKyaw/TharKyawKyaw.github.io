@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <h1>Hello {{name}}, Vue</h1>
+
+    <div id="app">
+        <h3 v-if="status">
+            {{name}} - {{age}} - <span v-html="icon"></span>
+        </h3>
+        <h3 v-else>
+            status = {{status}}
+        </h3>
+
+        <p v-bind:title="title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ratione nesciunt libero nihil voluptatem ducimus! Itaque placeat distinctio voluptate ipsum.
+        </p>
+
+        <img :src="photo" alt="">
+
+        <p v-if="mark>=40 && mark<80"> Pass</p>
+        <p v-else-if="mark<40">Fail</p>
+        <p v-else> D </p>
+
+        <h2>My Fav Fruits</h2>
+        <ul>
+            <li v-for="fruit in favfruits">{{fruit}}</li>
+        </ul>
+
+        <button @click="count++">Add 1</button>
+        <p>Count is {{count}}</p>
+
+        <button @click="greet">Greet</button>
+
+        <input type="text" v-model="fname">
+        <span>{{fname}}</span>
+
+        <form action="" @submit.prevent="savefriends">
+            <input type="text" v-model.trim="ffname"><br>
+            <input type="number" v-model.number="ffage"><br>
+            <input type="radio" id="male" value="Male" v-model="ffgender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" value="Female" v-model="ffgender">
+            <label for="female">Female</label>
+            <br>
+            <input type="submit" value="Save">
+        </form>
+
+        <p>Your Height</p>
+        <input type="number" v-model.number="meters">
+        <span>(meters)</span>
+
+        <p>Your Weight</p>
+        <input type="number" v-model.number="kilograms">
+        <span>(kilograms)</span>
+        <br><br>
+        <button @click="computeBMI">Compute BMI</button>
+
+        <h3>Your BMI</h3>
+        <p>{{bmi}}</p>
+        <p v-if="bmi <= 18.5">Underweight</p>
+        <p v-else-if="bmi > 18.5 && bmi <=24.9">Normal Weight</p>
+        <p v-else-if="bmi > 25 && bmi <=29.9">Overweight</p>
+        <p v-else>Obesity</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

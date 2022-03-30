@@ -1,0 +1,15 @@
+1.A
+	A has clear message than B which is labeling deleting items.
+	
+2.B
+	B is better than A.Instead of using label as A, B is using icons that can know easily and look better.
+	
+3.A
+	A is better than B.Its icon and text are scaling than B which icons are alittle larger.
+
+4.B
+	B is better than A.B has linespacing between image and texts that make clearly looking.
+	
+5.A
+	A is bettern than B.B's price style is better than A but A has labels such as(Campaing,New) in image is look better than B.
+	
