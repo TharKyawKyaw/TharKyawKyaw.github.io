@@ -63,11 +63,15 @@
         <button @click="computeBMI">Compute BMI</button>
 
         <h3>Your BMI</h3>
-        <p>{{bmi}}</p>
-        <p v-if="bmi <= 18.5">Underweight</p>
-        <p v-else-if="bmi > 18.5 && bmi <=24.9">Normal Weight</p>
-        <p v-else-if="bmi > 25 && bmi <=29.9">Overweight</p>
-        <p v-else>Obesity</p>
+        <p v-if="bmi != 0">{{bmi}}</p>
+        
+        <p v-if="bmi!=0 && bmi <= 18.5">Underweight</p>
+        <p v-else-if="bmi > 18.5 && bmi <=25">Normal Weight</p>
+        <p v-else-if="bmi > 25 && bmi <=30">Overweight</p>
+        <p v-else-if="bmi > 30">Obesity</p>
+
+        
+
     </div>
 
     <script src="app.js"></script>

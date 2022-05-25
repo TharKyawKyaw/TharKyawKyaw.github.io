@@ -18,8 +18,7 @@ const app = Vue.createApp({
             friends: [],
             meters: "",
             kilograms: "",
-            bmi: "",
-            bmiresult: "",
+            bmi: 0,
         }
     },
     methods:{
@@ -39,9 +38,6 @@ const app = Vue.createApp({
             let kg = this.kilograms
             this.bmi = kg/(m*m)
 
-            console.log(this.bmi)
-
-            
         }
     }
 })

@@ -1,0 +1,9 @@
+first_term = 0
+second_term = 1
+print(first_term, end=",")
+# print(second_term, end=',')
+while second_term <= 1000:
+    temp = second_term
+    second_term = temp + first_term
+    first_term = temp
+    print(temp, end=',')
