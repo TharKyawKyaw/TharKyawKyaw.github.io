@@ -1,0 +1,2 @@
+FileChannel can be faset than
+Standart IO if you are dealing with large file

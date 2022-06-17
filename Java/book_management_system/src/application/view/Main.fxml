@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+   <children>
+      <Pane layoutY="50.0" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #0080ff;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="234.0" layoutY="30.0" text="Book Management System" textFill="WHITE">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="50.0" layoutY="200.0" onMouseClicked="#book_click" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="122.0" fitWidth="200.0" layoutX="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/book.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="150.0" prefHeight="17.0" prefWidth="64.0" text="Books" textAlignment="CENTER" textFill="#00810d">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="300.0" layoutY="200.0" onMouseClicked="#author_click" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="141.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/author.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="150.0" prefHeight="30.0" prefWidth="96.0" text="Authors" textAlignment="CENTER" textFill="#00810d">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane layoutX="550.0" layoutY="200.0" onMouseClicked="#category_click" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fitHeight="140.0" fitWidth="141.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/category.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="52.0" layoutY="150.0" prefHeight="30.0" prefWidth="96.0" text="Categories" textAlignment="CENTER" textFill="#00810d">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>

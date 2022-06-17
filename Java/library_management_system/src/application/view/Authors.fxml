@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.AuthorController">
+   <children>
+      <ScrollPane layoutX="25.0" layoutY="25.0" prefHeight="300.0" prefWidth="650.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="650.0">
+               <children>
+                  <TableView fx:id="tbl_author" prefHeight="300.0" prefWidth="650.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="75.0" text="Id" />
+                      <TableColumn fx:id="col_name" prefWidth="260.0" text="Name" />
+                        <TableColumn fx:id="col_city" prefWidth="150.0" text="City" />
+                        <TableColumn fx:id="col_dob" prefWidth="150.0" text="Birthday" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="125.0" layoutY="350.0" prefHeight="35.0" text="Enter Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_name" layoutX="275.0" layoutY="350.0" prefHeight="35.0" prefWidth="275.0" promptText="Name" />
+      <Label layoutX="125.0" layoutY="425.0" prefHeight="35.0" text="Enter City">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_city" layoutX="275.0" layoutY="425.0" prefHeight="35.0" prefWidth="275.0" promptText="City" />
+      <Label layoutX="125.0" layoutY="500.0" prefHeight="35.0" text="Birthday">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="txt_birthday" layoutX="275.0" layoutY="500.0" prefHeight="35.0" prefWidth="275.0" promptText="Birthday" />
+      <Button layoutX="275.0" layoutY="575.0" mnemonicParsing="false" onAction="#btn_add_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #007508;" text="Add" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="375.0" layoutY="575.0" mnemonicParsing="false" onAction="#btn_update_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #7d5504;" text="Update" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="475.0" layoutY="575.0" mnemonicParsing="false" onAction="#btn_delete_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #e62020;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="600.0" layoutY="640.0" mnemonicParsing="false" onAction="#btn_back_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #0062ff;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SearchBookController">
+   <children>
+      <TextField fx:id="txt_category" layoutX="25.0" layoutY="50.0" prefHeight="35.0" prefWidth="225.0" promptText="Category" />
+      <TextField fx:id="txt_author" layoutX="275.0" layoutY="50.0" prefHeight="35.0" prefWidth="225.0" promptText="Author" />
+      <Button layoutX="625.0" layoutY="50.0" mnemonicParsing="false" onAction="#btn_delete_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #e62020;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ScrollPane layoutX="25.0" layoutY="125.0" prefHeight="450.0" prefWidth="675.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="675.0">
+               <children>
+                  <TableView fx:id="tbl_book" prefHeight="450.0" prefWidth="675.0">
+                    <columns>
+                      <TableColumn fx:id="col_id" prefWidth="100.0" text="Id" />
+                      <TableColumn fx:id="col_title" prefWidth="175.0" text="Title" />
+                        <TableColumn fx:id="col_category" prefWidth="150.0" text="Category" />
+                        <TableColumn fx:id="col_author" prefWidth="150.0" text="Author" />
+                        <TableColumn fx:id="col_avaliable" prefWidth="100.0" text="Avaliable" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button layoutX="625.0" layoutY="640.0" mnemonicParsing="false" onAction="#btn_back_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #0062ff;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="525.0" layoutY="50.0" mnemonicParsing="false" onAction="#btn_search_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #9719b0;" text="Search" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

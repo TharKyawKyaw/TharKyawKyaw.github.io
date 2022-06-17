@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="application.controller.AddBookController">
+   <children>
+      <Pane layoutY="25.0" prefHeight="75.0" prefWidth="700.0" style="-fx-background-color: #93e8f5;">
+         <children>
+            <Label layoutX="251.0" layoutY="15.0" text="Add New Book" textFill="#099638">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="125.0" layoutY="150.0" text="Book Code">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="225.0" text="Book Title">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="300.0" text="Author">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="375.0" text="Category">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_code" layoutX="275.0" layoutY="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Code">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txt_title" layoutX="275.0" layoutY="225.0" prefHeight="35.0" prefWidth="300.0" promptText="Title">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cbo_author" layoutX="275.0" layoutY="300.0" prefHeight="35.0" prefWidth="300.0" promptText="Choose Author" />
+      <ComboBox fx:id="cbo_category" layoutX="275.0" layoutY="375.0" prefHeight="35.0" prefWidth="300.0" promptText="Choose Category" />
+      <Button layoutX="275.0" layoutY="450.0" mnemonicParsing="false" onAction="#btn_save_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #00b309;" text="Save" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="500.0" layoutY="450.0" mnemonicParsing="false" onAction="#btn_reset_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #b36b00;" text="Reset" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="600.0" layoutY="540.0" mnemonicParsing="false" onAction="#btn_back_click" prefHeight="35.0" prefWidth="75.0" style="-fx-background-color: #0062ff;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
